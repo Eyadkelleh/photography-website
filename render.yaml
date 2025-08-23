@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: photography-website
+    runtime: node
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+    autoDeploy: true
+    disk:
+      name: photography-disk
+      mountPath: /opt/render/project/.next
+      sizeGB: 1
+    scaling:
+      minInstances: 1
+      maxInstances: 3
