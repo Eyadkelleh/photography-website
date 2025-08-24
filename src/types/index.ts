@@ -50,20 +50,6 @@ export interface Testimonial {
   verified?: boolean;
 }
 
-export interface BlogPost {
-  id: string;
-  title: string;
-  slug: string;
-  excerpt: string;
-  content: string;
-  image: string;
-  author: string;
-  publishedAt: string;
-  updatedAt: string;
-  category: string;
-  tags: string[];
-  readTime: number;
-}
 
 export interface ContactFormData {
   name: string;

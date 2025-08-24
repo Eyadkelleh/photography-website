@@ -1,0 +1,178 @@
+{
+  "site": {
+    "name": "Visual Poetry Photography",
+    "description": "Professional equestrian and portrait photography capturing authentic moments with love and artistry",
+    "tagline": "Pure, authentic, professional, captured with lots of love",
+    "email": "hello@visualpoetry.photography",
+    "phone": "+1 (555) 123-4567",
+    "location": "Available throughout California"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services", 
+    "portfolio": "Portfolio",
+    "testimonials": "Testimonials",
+    "contact": "Contact"
+  },
+  "services": {
+    "equestrian": {
+      "name": "Equestrian Photography",
+      "description": "Capturing the bond between horse and rider in stunning natural settings",
+      "price": "From $750",
+      "duration": "2-3 hours",
+      "features": {
+        "action": "Action and portrait shots",
+        "bonding": "Horse and rider bonding moments", 
+        "outdoor": "Natural outdoor settings",
+        "images": "50+ edited high-resolution images",
+        "gallery": "Private online gallery"
+      }
+    },
+    "portrait": {
+      "name": "Portrait Photography",
+      "description": "Professional headshots and personal branding photography",
+      "price": "From $450",
+      "duration": "1-2 hours",
+      "features": {
+        "headshots": "Professional headshots",
+        "branding": "Personal branding photos",
+        "outfits": "Multiple outfit changes",
+        "images": "30+ edited high-resolution images",
+        "linkedin": "LinkedIn-ready formats"
+      }
+    },
+    "business": {
+      "name": "Business Photography",
+      "description": "Corporate events, team photos, and professional branding",
+      "price": "From $950",
+      "duration": "3-4 hours",
+      "features": {
+        "events": "Corporate events",
+        "team": "Team photography",
+        "office": "Office environment shots",
+        "images": "75+ edited high-resolution images",
+        "rights": "Commercial usage rights"
+      }
+    },
+    "event": {
+      "name": "Event Photography",
+      "description": "Special occasions, celebrations, and milestone moments",
+      "price": "From $650",
+      "duration": "4-6 hours",
+      "features": {
+        "coverage": "Full event coverage",
+        "shots": "Candid and posed shots",
+        "group": "Group photography",
+        "images": "100+ edited high-resolution images",
+        "preview": "Quick preview within 48 hours"
+      }
+    }
+  },
+  "packages": {
+    "essential": {
+      "name": "Essential Package",
+      "price": "$750",
+      "description": "Perfect for individual sessions and smaller events",
+      "duration": "2 hours",
+      "features": ["2-hour session", "30 edited images", "Online gallery", "Print release"],
+      "includes": ["Pre-session consultation", "Professional editing", "Digital delivery"],
+      "deliverables": ["High-resolution images", "Web-optimized versions", "Print-ready files"]
+    },
+    "premium": {
+      "name": "Premium Package", 
+      "price": "$1,250",
+      "originalPrice": "$1,450",
+      "description": "Most popular choice for comprehensive coverage",
+      "duration": "4 hours",
+      "features": ["4-hour session", "75 edited images", "Online gallery", "Print release", "Rush delivery"],
+      "includes": ["Pre-session consultation", "Professional editing", "Digital delivery", "USB drive"],
+      "deliverables": ["High-resolution images", "Web-optimized versions", "Print-ready files", "Social media formats"]
+    },
+    "luxury": {
+      "name": "Luxury Package",
+      "price": "$2,200", 
+      "description": "Complete coverage with premium services",
+      "duration": "8 hours",
+      "features": ["8-hour session", "150+ edited images", "Online gallery", "Print release", "Same-day preview"],
+      "includes": ["Pre-session consultation", "Professional editing", "Digital delivery", "USB drive", "Premium album"],
+      "deliverables": ["High-resolution images", "Web-optimized versions", "Print-ready files", "Social media formats", "Premium prints"]
+    }
+  },
+  "awards": {
+    "equestrian": {
+      "name": "Best Equestrian Photographer",
+      "organization": "California Photography Awards",
+      "year": "2024"
+    },
+    "photographer": {
+      "name": "Professional Photographer of the Year",
+      "organization": "West Coast Photo Society", 
+      "year": "2023"
+    },
+    "portrait": {
+      "name": "Excellence in Portrait Photography",
+      "organization": "International Portrait Society",
+      "year": "2023"
+    }
+  },
+  "faqs": {
+    "general": {
+      "question": "What is included in a typical photography session?",
+      "answer": "Every session includes a pre-consultation, professional photography, expert editing, and delivery of high-resolution images through a private online gallery. Specific inclusions vary by package."
+    },
+    "booking": {
+      "question": "How far in advance should I book?",
+      "answer": "I recommend booking at least 4-6 weeks in advance, especially for weekend sessions and peak seasons (spring and fall). Wedding and event bookings should be made 3-6 months ahead."
+    },
+    "travel": {
+      "question": "Do you travel for sessions?",
+      "answer": "Yes! I travel throughout California and beyond. Travel fees may apply for locations outside my standard service area. Contact me for specific travel arrangements."
+    },
+    "weather": {
+      "question": "What happens if weather is bad for an outdoor session?",
+      "answer": "I monitor weather closely and will reschedule outdoor sessions if conditions are unsafe. Indoor backup locations are always available, and there are no fees for weather-related rescheduling."
+    },
+    "creative": {
+      "question": "Can I request specific shots or poses?",
+      "answer": "Absolutely! I encourage clients to share inspiration photos and specific requests during our pre-session consultation. My goal is to capture exactly what you envision."
+    }
+  },
+  "bookingSteps": {
+    "consultation": {
+      "title": "Initial Consultation",
+      "description": "We discuss your vision, preferences, and session details"
+    },
+    "planning": {
+      "title": "Session Planning", 
+      "description": "Location scouting, timing, and creative direction planning"
+    },
+    "session": {
+      "title": "Photography Session",
+      "description": "Professional photography session capturing your unique moments"
+    },
+    "editing": {
+      "title": "Expert Editing",
+      "description": "Professional post-processing and image enhancement"
+    },
+    "delivery": {
+      "title": "Gallery Delivery", 
+      "description": "High-resolution images delivered through private online gallery"
+    }
+  },
+  "budgetRanges": {
+    "under500": "Under $500",
+    "500to1000": "$500 - $1,000",
+    "1000to2000": "$1,000 - $2,000",
+    "2000to5000": "$2,000 - $5,000",
+    "over5000": "$5,000+"
+  },
+  "galleryCategories": {
+    "all": "All",
+    "equestrian": "Equestrian", 
+    "portrait": "Portrait",
+    "business": "Business",
+    "event": "Event",
+    "lifestyle": "Lifestyle"
+  }
+}

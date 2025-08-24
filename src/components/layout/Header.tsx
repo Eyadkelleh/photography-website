@@ -5,13 +5,14 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Camera } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui';
-import { NAVIGATION_ITEMS } from '@/lib/constants';
+import { Button, LanguageSwitcher } from '@/components/ui';
+import { useNavigationItems } from '@/lib/constants-i18n';
 import { MobileNav } from '@/components/navigation/MobileNav';
 
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
+  const navigationItems = useNavigationItems();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,7 +48,7 @@ export const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center space-x-8">
-          {NAVIGATION_ITEMS.map((item) => (
+          {navigationItems.map((item) => (
             <Link
               key={item.name}
               href={item.href}
@@ -65,6 +66,7 @@ export const Header = () => {
 
         {/* Desktop CTA Buttons */}
         <div className="hidden lg:flex items-center space-x-4">
+          <LanguageSwitcher />
           <Button variant="secondary" size="sm" asChild>
             <Link href="/portfolio">View Portfolio</Link>
           </Button>
@@ -75,6 +77,7 @@ export const Header = () => {
 
         {/* Mobile Contact Button & Hamburger */}
         <div className="flex items-center space-x-2 lg:hidden">
+          <LanguageSwitcher />
           <Button
             variant="primary"
             size="sm"

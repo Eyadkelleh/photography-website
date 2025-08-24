@@ -27,14 +27,6 @@ export const testimonialSchema = z.object({
   image: z.instanceof(File).optional(),
 });
 
-export const blogCommentSchema = z.object({
-  name: z.string().min(2, 'Name must be at least 2 characters'),
-  email: z.string().email('Invalid email address'),
-  comment: z.string().min(10, 'Comment must be at least 10 characters'),
-  website: z.string().url().optional().or(z.literal('')),
-});
-
 export type ContactFormData = z.infer<typeof contactFormSchema>;
 export type NewsletterData = z.infer<typeof newsletterSchema>;
 export type TestimonialData = z.infer<typeof testimonialSchema>;
-export type BlogCommentData = z.infer<typeof blogCommentSchema>;

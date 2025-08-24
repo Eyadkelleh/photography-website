@@ -16,7 +16,6 @@ export const NAVIGATION_ITEMS: NavigationItem[] = [
   { name: 'Services', href: '/services' },
   { name: 'Portfolio', href: '/portfolio' },
   { name: 'Testimonials', href: '/testimonials' },
-  { name: 'Blog', href: '/blog' },
   { name: 'Contact', href: '/contact' },
 ];
 

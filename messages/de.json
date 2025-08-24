@@ -1,0 +1,178 @@
+{
+  "site": {
+    "name": "Visual Poetry Photography",
+    "description": "Professionelle Reit- und Portraitfotografie, die authentische Momente mit Liebe und Kunstfertigkeit einfängt",
+    "tagline": "Rein, authentisch, professionell, mit viel Liebe aufgenommen",
+    "email": "hello@visualpoetry.photography",
+    "phone": "+1 (555) 123-4567",
+    "location": "Verfügbar in ganz Kalifornien"
+  },
+  "navigation": {
+    "home": "Startseite",
+    "about": "Über mich",
+    "services": "Leistungen", 
+    "portfolio": "Portfolio",
+    "testimonials": "Referenzen",
+    "contact": "Kontakt"
+  },
+  "services": {
+    "equestrian": {
+      "name": "Reitfotografie",
+      "description": "Die Verbindung zwischen Pferd und Reiter in atemberaubenden natürlichen Umgebungen einfangen",
+      "price": "Ab 750€",
+      "duration": "2-3 Stunden",
+      "features": {
+        "action": "Action- und Portraitaufnahmen",
+        "bonding": "Momente der Verbindung zwischen Pferd und Reiter", 
+        "outdoor": "Natürliche Außenaufnahmen",
+        "images": "50+ bearbeitete hochauflösende Bilder",
+        "gallery": "Private Online-Galerie"
+      }
+    },
+    "portrait": {
+      "name": "Portraitfotografie",
+      "description": "Professionelle Bewerbungsfotos und Personal-Branding-Fotografie",
+      "price": "Ab 450€",
+      "duration": "1-2 Stunden",
+      "features": {
+        "headshots": "Professionelle Bewerbungsfotos",
+        "branding": "Personal-Branding-Fotos",
+        "outfits": "Mehrere Outfit-Wechsel",
+        "images": "30+ bearbeitete hochauflösende Bilder",
+        "linkedin": "LinkedIn-geeignete Formate"
+      }
+    },
+    "business": {
+      "name": "Unternehmensfotografie",
+      "description": "Firmenevents, Teamfotos und professionelles Branding",
+      "price": "Ab 950€",
+      "duration": "3-4 Stunden",
+      "features": {
+        "events": "Firmenevents",
+        "team": "Teamfotografie",
+        "office": "Büroumgebung-Aufnahmen",
+        "images": "75+ bearbeitete hochauflösende Bilder",
+        "rights": "Kommerzielle Nutzungsrechte"
+      }
+    },
+    "event": {
+      "name": "Eventfotografie",
+      "description": "Besondere Anlässe, Feiern und Meilenstein-Momente",
+      "price": "Ab 650€",
+      "duration": "4-6 Stunden",
+      "features": {
+        "coverage": "Vollständige Event-Abdeckung",
+        "shots": "Candid- und gestellte Aufnahmen",
+        "group": "Gruppenfotografie",
+        "images": "100+ bearbeitete hochauflösende Bilder",
+        "preview": "Schnelle Vorschau innerhalb von 48 Stunden"
+      }
+    }
+  },
+  "packages": {
+    "essential": {
+      "name": "Essential-Paket",
+      "price": "750€",
+      "description": "Perfekt für individuelle Sessions und kleinere Events",
+      "duration": "2 Stunden",
+      "features": ["2-Stunden-Session", "30 bearbeitete Bilder", "Online-Galerie", "Druckfreigabe"],
+      "includes": ["Vor-Session Beratung", "Professionelle Bearbeitung", "Digitale Lieferung"],
+      "deliverables": ["Hochauflösende Bilder", "Web-optimierte Versionen", "Druckfertige Dateien"]
+    },
+    "premium": {
+      "name": "Premium-Paket", 
+      "price": "1.250€",
+      "originalPrice": "1.450€",
+      "description": "Die beliebteste Wahl für umfassende Abdeckung",
+      "duration": "4 Stunden",
+      "features": ["4-Stunden-Session", "75 bearbeitete Bilder", "Online-Galerie", "Druckfreigabe", "Express-Lieferung"],
+      "includes": ["Vor-Session Beratung", "Professionelle Bearbeitung", "Digitale Lieferung", "USB-Stick"],
+      "deliverables": ["Hochauflösende Bilder", "Web-optimierte Versionen", "Druckfertige Dateien", "Social-Media-Formate"]
+    },
+    "luxury": {
+      "name": "Luxus-Paket",
+      "price": "2.200€", 
+      "description": "Vollständige Abdeckung mit Premium-Services",
+      "duration": "8 Stunden",
+      "features": ["8-Stunden-Session", "150+ bearbeitete Bilder", "Online-Galerie", "Druckfreigabe", "Vorschau am selben Tag"],
+      "includes": ["Vor-Session Beratung", "Professionelle Bearbeitung", "Digitale Lieferung", "USB-Stick", "Premium-Album"],
+      "deliverables": ["Hochauflösende Bilder", "Web-optimierte Versionen", "Druckfertige Dateien", "Social-Media-Formate", "Premium-Drucke"]
+    }
+  },
+  "awards": {
+    "equestrian": {
+      "name": "Bester Reitfotograf",
+      "organization": "California Photography Awards",
+      "year": "2024"
+    },
+    "photographer": {
+      "name": "Professioneller Fotograf des Jahres",
+      "organization": "West Coast Photo Society", 
+      "year": "2023"
+    },
+    "portrait": {
+      "name": "Exzellenz in der Portraitfotografie",
+      "organization": "International Portrait Society",
+      "year": "2023"
+    }
+  },
+  "faqs": {
+    "general": {
+      "question": "Was ist in einer typischen Fotosession enthalten?",
+      "answer": "Jede Session beinhaltet eine Vor-Beratung, professionelle Fotografie, Expertenbarbeitung und die Lieferung hochauflösender Bilder über eine private Online-Galerie. Spezifische Leistungen variieren je nach Paket."
+    },
+    "booking": {
+      "question": "Wie weit im Voraus sollte ich buchen?",
+      "answer": "Ich empfehle eine Buchung mindestens 4-6 Wochen im Voraus, besonders für Wochenend-Sessions und Hauptsaisons (Frühling und Herbst). Hochzeits- und Event-Buchungen sollten 3-6 Monate im Voraus gemacht werden."
+    },
+    "travel": {
+      "question": "Reisen Sie für Sessions?",
+      "answer": "Ja! Ich reise durch ganz Kalifornien und darüber hinaus. Reisekosten können für Orte außerhalb meines Standard-Servicebereichs anfallen. Kontaktieren Sie mich für spezifische Reisearrangements."
+    },
+    "weather": {
+      "question": "Was passiert, wenn das Wetter für eine Outdoor-Session schlecht ist?",
+      "answer": "Ich überwache das Wetter genau und verschiebe Outdoor-Sessions, wenn die Bedingungen unsicher sind. Indoor-Backup-Locations sind immer verfügbar, und es fallen keine Gebühren für wetterbedingte Terminverschiebungen an."
+    },
+    "creative": {
+      "question": "Kann ich spezifische Aufnahmen oder Posen anfordern?",
+      "answer": "Absolut! Ich ermutige Kunden, Inspirationsfotos und spezifische Wünsche während unserer Vor-Session Beratung zu teilen. Mein Ziel ist es, genau das einzufangen, was Sie sich vorstellen."
+    }
+  },
+  "bookingSteps": {
+    "consultation": {
+      "title": "Erste Beratung",
+      "description": "Wir besprechen Ihre Vision, Präferenzen und Session-Details"
+    },
+    "planning": {
+      "title": "Session-Planung", 
+      "description": "Location-Scouting, Timing und kreative Ausrichtung planen"
+    },
+    "session": {
+      "title": "Fotosession",
+      "description": "Professionelle Fotosession, die Ihre einzigartigen Momente einfängt"
+    },
+    "editing": {
+      "title": "Expertenbearbeitung",
+      "description": "Professionelle Nachbearbeitung und Bildverbesserung"
+    },
+    "delivery": {
+      "title": "Galerie-Lieferung", 
+      "description": "Hochauflösende Bilder über private Online-Galerie geliefert"
+    }
+  },
+  "budgetRanges": {
+    "under500": "Unter 500€",
+    "500to1000": "500€ - 1.000€",
+    "1000to2000": "1.000€ - 2.000€",
+    "2000to5000": "2.000€ - 5.000€",
+    "over5000": "5.000€+"
+  },
+  "galleryCategories": {
+    "all": "Alle",
+    "equestrian": "Reit", 
+    "portrait": "Portrait",
+    "business": "Business",
+    "event": "Event",
+    "lifestyle": "Lifestyle"
+  }
+}
