@@ -3,7 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Check, Clock, DollarSign, MapPin, Camera } from 'lucide-react';
 import { Button, Card, CardContent, CardHeader, CardTitle } from '@/components/ui';
-import { SERVICES, PACKAGES } from '@/lib/constants';
+import { useTranslations } from 'next-intl';
+import { useServices, usePackages } from '@/lib/constants-i18n';
 
 export const metadata: Metadata = {
   title: 'Photography Services | Visual Poetry Photography',
@@ -15,40 +16,44 @@ export const metadata: Metadata = {
   },
 };
 
-const addOns = [
-  {
-    name: 'Rush Processing',
-    description: 'Get your photos within 48 hours',
-    price: '$150',
-  },
-  {
-    name: 'Additional Hours',
-    description: 'Extend your session time',
-    price: '$200/hour',
-  },
-  {
-    name: 'Travel Fee',
-    description: 'For locations outside 30-mile radius',
-    price: '$1/mile',
-  },
-  {
-    name: 'Second Shooter',
-    description: 'Additional photographer for events',
-    price: '$300',
-  },
-  {
-    name: 'Print Package',
-    description: 'Professional prints and album',
-    price: '$400',
-  },
-  {
-    name: 'Drone Photography',
-    description: 'Aerial shots (weather permitting)',
-    price: '$250',
-  },
-];
-
 export default function ServicesPage() {
+  const t = useTranslations('servicesPage');
+  const services = useServices();
+  const packages = usePackages();
+
+  const addOns = [
+    {
+      name: t('addOns.rushProcessing.name'),
+      description: t('addOns.rushProcessing.description'),
+      price: t('addOns.rushProcessing.price'),
+    },
+    {
+      name: t('addOns.additionalHours.name'),
+      description: t('addOns.additionalHours.description'),
+      price: t('addOns.additionalHours.price'),
+    },
+    {
+      name: t('addOns.travelFee.name'),
+      description: t('addOns.travelFee.description'),
+      price: t('addOns.travelFee.price'),
+    },
+    {
+      name: t('addOns.secondShooter.name'),
+      description: t('addOns.secondShooter.description'),
+      price: t('addOns.secondShooter.price'),
+    },
+    {
+      name: t('addOns.printPackage.name'),
+      description: t('addOns.printPackage.description'),
+      price: t('addOns.printPackage.price'),
+    },
+    {
+      name: t('addOns.dronePhotography.name'),
+      description: t('addOns.dronePhotography.description'),
+      price: t('addOns.dronePhotography.price'),
+    },
+  ];
+
   return (
     <div className="min-h-screen">
       <section className="relative py-24 bg-gradient-to-br from-deep-charcoal to-warm-brown text-warm-white">
@@ -56,14 +61,13 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold mb-6 leading-tight">
-              Photography Services
+              {t('title')}
             </h1>
             <p className="text-xl md:text-2xl text-warm-white/90 mb-12 leading-relaxed">
-              From intimate portraits to grand celebrations, we specialize in capturing 
-              life&apos;s most precious moments with artistry and authenticity.
+              {t('subtitle')}
             </p>
             <Button size="lg" className="bg-gold-accent text-deep-charcoal hover:bg-yellow-500" asChild>
-              <Link href="#packages">View Packages</Link>
+              <Link href="#packages">{t('viewPackages')}</Link>
             </Button>
           </div>
         </div>
@@ -73,16 +77,15 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-deep-charcoal mb-6">
-              Our Services
+              {t('ourServices')}
             </h2>
             <p className="text-lg text-warm-gray max-w-3xl mx-auto leading-relaxed">
-              Each service is tailored to your unique needs, ensuring we capture 
-              the essence of your story with professional quality and artistic vision.
+              {t('servicesDescription')}
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {SERVICES.map((service) => (
+            {services.map((service) => (
               <Card key={service.id} id={service.id} hover className="group">
                 <div className="relative h-80 overflow-hidden rounded-t-xl">
                   <Image
@@ -95,7 +98,7 @@ export default function ServicesPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                   {service.popular && (
                     <div className="absolute top-6 left-6 bg-gold-accent text-deep-charcoal px-4 py-2 rounded-full font-semibold">
-                      Most Popular
+                      {t('mostPopular')}
                     </div>
                   )}
                   <div className="absolute bottom-6 left-6 right-6">
@@ -130,7 +133,7 @@ export default function ServicesPage() {
                   </div>
                   <Button className="w-full group-hover:bg-gold-accent group-hover:text-deep-charcoal" asChild>
                     <Link href={`/contact?service=${service.id}`}>
-                      Book This Service
+                      {t('bookService')}
                     </Link>
                   </Button>
                 </CardContent>
@@ -144,21 +147,20 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-deep-charcoal mb-6">
-              Photography Packages
+              {t('photographyPackages')}
             </h2>
             <p className="text-lg text-warm-gray max-w-3xl mx-auto leading-relaxed">
-              Choose the package that best fits your needs. All packages include 
-              professional editing, high-resolution images, and a private online gallery.
+              {t('packagesDescription')}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {PACKAGES.map((pkg) => (
+            {packages.map((pkg) => (
               <Card key={pkg.id} hover className={`relative group ${pkg.popular ? 'ring-2 ring-gold-accent' : ''}`}>
                 {pkg.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-gold-accent text-deep-charcoal px-6 py-2 rounded-full font-semibold text-sm">
-                      Most Popular
+                      {t('mostPopular')}
                     </div>
                   </div>
                 )}
@@ -179,12 +181,12 @@ export default function ServicesPage() {
                 <CardContent className="space-y-6">
                   <div className="flex items-center justify-center text-sm text-warm-gray bg-soft-beige rounded-lg py-2">
                     <Clock className="h-4 w-4 mr-2" />
-                    {pkg.duration} session
+                    {pkg.duration} {t('session')}
                   </div>
 
                   <div className="space-y-4">
                     <div>
-                      <h4 className="font-semibold text-deep-charcoal mb-2">Features:</h4>
+                      <h4 className="font-semibold text-deep-charcoal mb-2">{t('features')}:</h4>
                       <ul className="space-y-2">
                         {pkg.features.map((feature, index) => (
                           <li key={index} className="flex items-center space-x-3">
@@ -196,7 +198,7 @@ export default function ServicesPage() {
                     </div>
 
                     <div>
-                      <h4 className="font-semibold text-deep-charcoal mb-2">Includes:</h4>
+                      <h4 className="font-semibold text-deep-charcoal mb-2">{t('includes')}:</h4>
                       <ul className="space-y-2">
                         {pkg.includes.map((item, index) => (
                           <li key={index} className="flex items-center space-x-3">
@@ -208,7 +210,7 @@ export default function ServicesPage() {
                     </div>
 
                     <div>
-                      <h4 className="font-semibold text-deep-charcoal mb-2">Deliverables:</h4>
+                      <h4 className="font-semibold text-deep-charcoal mb-2">{t('deliverables')}:</h4>
                       <ul className="space-y-2">
                         {pkg.deliverables.map((deliverable, index) => (
                           <li key={index} className="flex items-center space-x-3">
@@ -225,7 +227,7 @@ export default function ServicesPage() {
                     asChild
                   >
                     <Link href={`/contact?package=${pkg.id}`}>
-                      Choose {pkg.name}
+                      {t('choose')} {pkg.name}
                     </Link>
                   </Button>
                 </CardContent>
@@ -235,10 +237,10 @@ export default function ServicesPage() {
 
           <div className="text-center mt-12">
             <p className="text-warm-gray mb-6">
-              Need something custom? We&apos;d love to work with you to create a package that fits your specific needs.
+              {t('customDescription')}
             </p>
             <Button variant="secondary" size="lg" asChild>
-              <Link href="/contact?custom=true">Request Custom Quote</Link>
+              <Link href="/contact?custom=true">{t('customQuote')}</Link>
             </Button>
           </div>
         </div>
@@ -248,11 +250,10 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-deep-charcoal mb-6">
-              Add-On Services
+              {t('addOnServices')}
             </h2>
             <p className="text-lg text-warm-gray max-w-3xl mx-auto leading-relaxed">
-              Enhance your photography experience with these additional services. 
-              Perfect for making your session even more special and comprehensive.
+              {t('addOnDescription')}
             </p>
           </div>
 
@@ -283,11 +284,10 @@ export default function ServicesPage() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-serif font-bold text-deep-charcoal mb-6">
-                Service Areas
+                {t('serviceAreas')}
               </h2>
               <p className="text-lg text-warm-gray leading-relaxed">
-                We proudly serve clients throughout California and are available for 
-                destination sessions. Travel fees may apply for locations outside our standard service area.
+                {t('serviceAreasDescription')}
               </p>
             </div>
 
@@ -295,43 +295,43 @@ export default function ServicesPage() {
               <Card className="text-center group hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
                   <MapPin className="h-8 w-8 text-gold-accent mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                  <h3 className="font-serif font-semibold text-deep-charcoal mb-2">Bay Area</h3>
-                  <p className="text-warm-gray text-sm">San Francisco, Oakland, San Jose and surrounding areas</p>
+                  <h3 className="font-serif font-semibold text-deep-charcoal mb-2">{t('areas.bayArea.name')}</h3>
+                  <p className="text-warm-gray text-sm">{t('areas.bayArea.description')}</p>
                 </CardContent>
               </Card>
               <Card className="text-center group hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
                   <MapPin className="h-8 w-8 text-gold-accent mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                  <h3 className="font-serif font-semibold text-deep-charcoal mb-2">Wine Country</h3>
-                  <p className="text-warm-gray text-sm">Napa Valley, Sonoma County, and wine regions</p>
+                  <h3 className="font-serif font-semibold text-deep-charcoal mb-2">{t('areas.wineCountry.name')}</h3>
+                  <p className="text-warm-gray text-sm">{t('areas.wineCountry.description')}</p>
                 </CardContent>
               </Card>
               <Card className="text-center group hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
                   <MapPin className="h-8 w-8 text-gold-accent mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                  <h3 className="font-serif font-semibold text-deep-charcoal mb-2">Central Coast</h3>
-                  <p className="text-warm-gray text-sm">Monterey, Santa Barbara, and coastal areas</p>
+                  <h3 className="font-serif font-semibold text-deep-charcoal mb-2">{t('areas.centralCoast.name')}</h3>
+                  <p className="text-warm-gray text-sm">{t('areas.centralCoast.description')}</p>
                 </CardContent>
               </Card>
               <Card className="text-center group hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
                   <MapPin className="h-8 w-8 text-gold-accent mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                  <h3 className="font-serif font-semibold text-deep-charcoal mb-2">Los Angeles</h3>
-                  <p className="text-warm-gray text-sm">LA County, Orange County, and surrounding areas</p>
+                  <h3 className="font-serif font-semibold text-deep-charcoal mb-2">{t('areas.losAngeles.name')}</h3>
+                  <p className="text-warm-gray text-sm">{t('areas.losAngeles.description')}</p>
                 </CardContent>
               </Card>
               <Card className="text-center group hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
                   <MapPin className="h-8 w-8 text-gold-accent mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                  <h3 className="font-serif font-semibold text-deep-charcoal mb-2">Sacramento</h3>
-                  <p className="text-warm-gray text-sm">Sacramento Valley and Northern California</p>
+                  <h3 className="font-serif font-semibold text-deep-charcoal mb-2">{t('areas.sacramento.name')}</h3>
+                  <p className="text-warm-gray text-sm">{t('areas.sacramento.description')}</p>
                 </CardContent>
               </Card>
               <Card className="text-center group hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
                   <Camera className="h-8 w-8 text-gold-accent mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                  <h3 className="font-serif font-semibold text-deep-charcoal mb-2">Destination</h3>
-                  <p className="text-warm-gray text-sm">Available for travel anywhere in the US</p>
+                  <h3 className="font-serif font-semibold text-deep-charcoal mb-2">{t('areas.destination.name')}</h3>
+                  <p className="text-warm-gray text-sm">{t('areas.destination.description')}</p>
                 </CardContent>
               </Card>
             </div>
@@ -342,18 +342,17 @@ export default function ServicesPage() {
       <section className="py-24 bg-deep-charcoal text-warm-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">
-            Ready to Book Your Session?
+            {t('readyToBook')}
           </h2>
           <p className="text-xl text-warm-white/80 max-w-3xl mx-auto mb-12 leading-relaxed">
-            Let&apos;s create something beautiful together. Contact us today to discuss your 
-            photography needs and find the perfect service for your special moments.
+            {t('readyDescription')}
           </p>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
             <Button size="lg" className="bg-gold-accent text-deep-charcoal hover:bg-yellow-500" asChild>
-              <Link href="/contact">Get Started</Link>
+              <Link href="/contact">{t('getStarted')}</Link>
             </Button>
             <Button variant="secondary" size="lg" className="border-warm-white text-warm-white hover:bg-warm-white hover:text-deep-charcoal" asChild>
-              <Link href="/portfolio">View Our Work</Link>
+              <Link href="/portfolio">{t('viewWork')}</Link>
             </Button>
           </div>
         </div>

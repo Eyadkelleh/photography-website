@@ -174,5 +174,163 @@
     "business": "Business",
     "event": "Event",
     "lifestyle": "Lifestyle"
+  },
+  "servicesPage": {
+    "title": "Fotografische Leistungen",
+    "subtitle": "Von intimen Porträts bis hin zu großen Feiern spezialisieren wir uns darauf, die kostbarsten Momente des Lebens mit Kunstfertigkeit und Authentizität einzufangen.",
+    "viewPackages": "Pakete ansehen",
+    "ourServices": "Unsere Leistungen",
+    "servicesDescription": "Jede Leistung wird auf Ihre individuellen Bedürfnisse zugeschnitten und stellt sicher, dass wir die Essenz Ihrer Geschichte mit professioneller Qualität und künstlerischer Vision einfangen.",
+    "mostPopular": "Am beliebtesten",
+    "bookService": "Diese Leistung buchen",
+    "photographyPackages": "Fotografie-Pakete",
+    "packagesDescription": "Wählen Sie das Paket, das am besten zu Ihren Bedürfnissen passt. Alle Pakete beinhalten professionelle Bearbeitung, hochauflösende Bilder und eine private Online-Galerie.",
+    "session": "Session",
+    "features": "Leistungen",
+    "includes": "Beinhaltet",
+    "deliverables": "Lieferumfang",
+    "choose": "Wählen Sie",
+    "customDescription": "Brauchen Sie etwas Individuelles? Wir arbeiten gerne mit Ihnen zusammen, um ein Paket zu erstellen, das genau zu Ihren Bedürfnissen passt.",
+    "customQuote": "Individuelles Angebot anfordern",
+    "addOnServices": "Zusatzleistungen",
+    "addOnDescription": "Erweitern Sie Ihr Fotografieerlebnis mit diesen zusätzlichen Services. Perfekt, um Ihre Session noch spezieller und umfassender zu gestalten.",
+    "serviceAreas": "Servicegebiete",
+    "serviceAreasDescription": "Wir bedienen stolz Kunden in ganz Kalifornien und sind für Destination-Sessions verfügbar. Reisekosten können für Orte außerhalb unseres Standard-Servicebereichs anfallen.",
+    "readyToBook": "Bereit, Ihre Session zu buchen?",
+    "readyDescription": "Lassen Sie uns gemeinsam etwas Schönes schaffen. Kontaktieren Sie uns noch heute, um Ihre Fotografie-Bedürfnisse zu besprechen und die perfekte Leistung für Ihre besonderen Momente zu finden.",
+    "getStarted": "Loslegen",
+    "viewWork": "Unsere Arbeiten ansehen",
+    "addOns": {
+      "rushProcessing": {
+        "name": "Express-Bearbeitung",
+        "description": "Erhalten Sie Ihre Fotos innerhalb von 48 Stunden",
+        "price": "150€"
+      },
+      "additionalHours": {
+        "name": "Zusätzliche Stunden",
+        "description": "Verlängern Sie Ihre Session-Zeit",
+        "price": "200€/Stunde"
+      },
+      "travelFee": {
+        "name": "Reisekosten",
+        "description": "Für Orte außerhalb des 50-km-Radius",
+        "price": "1€/km"
+      },
+      "secondShooter": {
+        "name": "Zweiter Fotograf",
+        "description": "Zusätzlicher Fotograf für Events",
+        "price": "300€"
+      },
+      "printPackage": {
+        "name": "Druck-Paket",
+        "description": "Professionelle Drucke und Album",
+        "price": "400€"
+      },
+      "dronePhotography": {
+        "name": "Drohnenfotografie",
+        "description": "Luftaufnahmen (wetterabhängig)",
+        "price": "250€"
+      }
+    },
+    "areas": {
+      "bayArea": {
+        "name": "Bay Area",
+        "description": "San Francisco, Oakland, San Jose und Umgebung"
+      },
+      "wineCountry": {
+        "name": "Weinland",
+        "description": "Napa Valley, Sonoma County und Weinregionen"
+      },
+      "centralCoast": {
+        "name": "Zentrale Küste",
+        "description": "Monterey, Santa Barbara und Küstengebiete"
+      },
+      "losAngeles": {
+        "name": "Los Angeles",
+        "description": "LA County, Orange County und Umgebung"
+      },
+      "sacramento": {
+        "name": "Sacramento",
+        "description": "Sacramento Valley und Nordkalifornien"
+      },
+      "destination": {
+        "name": "Destination",
+        "description": "Verfügbar für Reisen überall in den USA"
+      }
+    }
+  },
+  "aboutPage": {
+    "title": "Lernen Sie die Künstlerin kennen",
+    "subtitle": "Hinter jedem Foto steckt eine Geschichte, und ich bin hier, um Ihnen zu helfen, Ihre zu erzählen.",
+    "intro1": "Ich liebe die kleinen Geschichten. Das Ungestellte. Das, was zwischen den Zeilen passiert. Nicht Perfektion zählt – sondern Persönlichkeit.",
+    "intro2": "Ich tauche mit ein, beobachte, begleite. Bin nah, wenn ihr mich braucht – und zurückhaltend, wenn der Moment für sich spricht.",
+    "myStyle": "Mein Stil:",
+    "styleGentle": "Sanft & emotional",
+    "styleLight": "Natürliches Licht & warme Töne",
+    "styleDetail": "Detailverliebt & intuitiv",
+    "styleEmpathetic": "Einfühlsam & entspannt",
+    "myWish": "Mein Wunsch: Dass ihr euch in euren Bildern wiederfindet – mit all euren Facetten.",
+    "letsCreate": "Lassen Sie uns gemeinsam schaffen",
+    "viewWork": "Meine Arbeiten ansehen",
+    "capturingMemories": "Erinnerungen einfangen seit 2014",
+    "byTheNumbers": "In Zahlen",
+    "numbersDescription": "Ein Jahrzehnt der Hingabe an die Kunst der Fotografie hat zu unzähligen schönen, eingefangenen und bewahrten Momenten geführt.",
+    "myJourney": "Meine Reise",
+    "journeyDescription": "Jeder Fotograf hat eine Geschichte. Hier erfahren Sie, wie sich meine Leidenschaft für das Einfangen authentischer Momente zu Visual Poetry Photography entwickelt hat.",
+    "awardsRecognition": "Auszeichnungen & Anerkennung",
+    "awardsDescription": "Ich fühle mich geehrt, Anerkennung von Kollegen und Branchenorganisationen für mein Engagement für Exzellenz in der Fotografie erhalten zu haben.",
+    "myPhilosophy": "Meine Philosophie",
+    "philosophyQuote": "Fotografie bedeutet nicht nur zu erfassen, was man sieht, sondern zu fühlen, was man erlebt. Jede Session ist eine Gelegenheit, Kunst zu schaffen, die Ihre einzigartige Geschichte erzählt und die Emotionen des Moments für immer bewahrt.",
+    "philosophyAuthor": "— Uta, Visual Poetry Photography",
+    "readyToCreate": "Bereit, etwas Schönes zu schaffen?",
+    "readyDescription": "Lassen Sie uns zusammenarbeiten, um Ihre kostbarsten Momente einzufangen. Ich würde gerne Ihre Geschichte hören und besprechen, wie wir Ihre Vision zum Leben erwecken können.",
+    "startSession": "Ihre Session starten",
+    "viewServices": "Services ansehen",
+    "stats": {
+      "experience": "Jahre Erfahrung",
+      "clients": "Zufriedene Kunden",
+      "sessions": "Foto-Sessions",
+      "awards": "Gewonnene Auszeichnungen"
+    },
+    "timeline": {
+      "2014": {
+        "title": "Die Reise beginnt",
+        "description": "Begann Fotografie als Hobby während der Arbeit mit Pferden und entdeckte meine Leidenschaft für das Einfangen der Verbindung zwischen Menschen und Tieren."
+      },
+      "2016": {
+        "title": "Professionelle Zertifizierung",
+        "description": "Abschluss der fortgeschrittenen Fotografie-Zertifizierung und Beginn der Arbeit mit professionellen Kunden, spezialisiert auf Reitfotografie."
+      },
+      "2018": {
+        "title": "Studio-Eröffnung",
+        "description": "Gründung von Visual Poetry Photography, Erweiterung der Services um Porträts und Unternehmensfotografie."
+      },
+      "2020": {
+        "title": "Auszeichnungs-Anerkennung",
+        "description": "Erhielt erste große Fotografie-Auszeichnung für Exzellenz in der Reitfotografie von der California Photography Society."
+      },
+      "2022": {
+        "title": "Digitale Innovation",
+        "description": "Übernahme modernster digitaler Techniken und Expansion in Lifestyle- und Eventfotografie."
+      },
+      "2024": {
+        "title": "Anhaltende Exzellenz",
+        "description": "Feier eines Jahrzehnts des Einfangens von Erinnerungen und kontinuierliches Erweitern kreativer Grenzen in der Fotografie."
+      }
+    },
+    "values": {
+      "authenticMoments": {
+        "title": "Authentische Momente",
+        "description": "Einfangen echter Emotionen und natürlicher Interaktionen, die Ihre wahre Geschichte erzählen."
+      },
+      "personalConnection": {
+        "title": "Persönliche Verbindung",
+        "description": "Aufbau von Beziehungen zu Kunden, um komfortable, bedeutungsvolle Sessions zu schaffen."
+      },
+      "timelessQuality": {
+        "title": "Zeitlose Qualität",
+        "description": "Erschaffung von Fotografien, die über Generationen hinweg geschätzt werden."
+      }
+    }
   }
 }

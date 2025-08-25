@@ -174,5 +174,163 @@
     "business": "Business",
     "event": "Event",
     "lifestyle": "Lifestyle"
+  },
+  "servicesPage": {
+    "title": "Photography Services",
+    "subtitle": "From intimate portraits to grand celebrations, we specialize in capturing life's most precious moments with artistry and authenticity.",
+    "viewPackages": "View Packages",
+    "ourServices": "Our Services",
+    "servicesDescription": "Each service is tailored to your unique needs, ensuring we capture the essence of your story with professional quality and artistic vision.",
+    "mostPopular": "Most Popular",
+    "bookService": "Book This Service",
+    "photographyPackages": "Photography Packages",
+    "packagesDescription": "Choose the package that best fits your needs. All packages include professional editing, high-resolution images, and a private online gallery.",
+    "session": "session",
+    "features": "Features",
+    "includes": "Includes",
+    "deliverables": "Deliverables",
+    "choose": "Choose",
+    "customDescription": "Need something custom? We'd love to work with you to create a package that fits your specific needs.",
+    "customQuote": "Request Custom Quote",
+    "addOnServices": "Add-On Services",
+    "addOnDescription": "Enhance your photography experience with these additional services. Perfect for making your session even more special and comprehensive.",
+    "serviceAreas": "Service Areas",
+    "serviceAreasDescription": "We proudly serve clients throughout California and are available for destination sessions. Travel fees may apply for locations outside our standard service area.",
+    "readyToBook": "Ready to Book Your Session?",
+    "readyDescription": "Let's create something beautiful together. Contact us today to discuss your photography needs and find the perfect service for your special moments.",
+    "getStarted": "Get Started",
+    "viewWork": "View Our Work",
+    "addOns": {
+      "rushProcessing": {
+        "name": "Rush Processing",
+        "description": "Get your photos within 48 hours",
+        "price": "$150"
+      },
+      "additionalHours": {
+        "name": "Additional Hours",
+        "description": "Extend your session time",
+        "price": "$200/hour"
+      },
+      "travelFee": {
+        "name": "Travel Fee",
+        "description": "For locations outside 30-mile radius",
+        "price": "$1/mile"
+      },
+      "secondShooter": {
+        "name": "Second Shooter",
+        "description": "Additional photographer for events",
+        "price": "$300"
+      },
+      "printPackage": {
+        "name": "Print Package",
+        "description": "Professional prints and album",
+        "price": "$400"
+      },
+      "dronePhotography": {
+        "name": "Drone Photography",
+        "description": "Aerial shots (weather permitting)",
+        "price": "$250"
+      }
+    },
+    "areas": {
+      "bayArea": {
+        "name": "Bay Area",
+        "description": "San Francisco, Oakland, San Jose and surrounding areas"
+      },
+      "wineCountry": {
+        "name": "Wine Country",
+        "description": "Napa Valley, Sonoma County, and wine regions"
+      },
+      "centralCoast": {
+        "name": "Central Coast",
+        "description": "Monterey, Santa Barbara, and coastal areas"
+      },
+      "losAngeles": {
+        "name": "Los Angeles",
+        "description": "LA County, Orange County, and surrounding areas"
+      },
+      "sacramento": {
+        "name": "Sacramento",
+        "description": "Sacramento Valley and Northern California"
+      },
+      "destination": {
+        "name": "Destination",
+        "description": "Available for travel anywhere in the US"
+      }
+    }
+  },
+  "aboutPage": {
+    "title": "Meet the Artist",
+    "subtitle": "Behind every photograph is a story, and I'm here to help you tell yours.",
+    "intro1": "I love the little stories. The unstaged moments. What happens between the lines. It's not perfection that counts – it's personality.",
+    "intro2": "I immerse myself, observe, accompany. I'm close when you need me – and reserved when the moment speaks for itself.",
+    "myStyle": "My Style:",
+    "styleGentle": "Gentle & emotional",
+    "styleLight": "Natural light & warm tones",
+    "styleDetail": "Detail-loving & intuitive",
+    "styleEmpathetic": "Empathetic & relaxed",
+    "myWish": "My wish: That you find yourself in your images – with all your facets.",
+    "letsCreate": "Let's Create Together",
+    "viewWork": "View My Work",
+    "capturingMemories": "Capturing memories since 2014",
+    "byTheNumbers": "By the Numbers",
+    "numbersDescription": "A decade of dedication to the art of photography has resulted in countless beautiful moments captured and preserved.",
+    "myJourney": "My Journey",
+    "journeyDescription": "Every photographer has a story. Here's how my passion for capturing authentic moments evolved into Visual Poetry Photography.",
+    "awardsRecognition": "Awards & Recognition",
+    "awardsDescription": "I'm honored to have received recognition from peers and industry organizations for my commitment to excellence in photography.",
+    "myPhilosophy": "My Philosophy",
+    "philosophyQuote": "Photography is not just about capturing what you see, but feeling what you experience. Every session is an opportunity to create art that tells your unique story and preserves the emotions of the moment forever.",
+    "philosophyAuthor": "— Uta, Visual Poetry Photography",
+    "readyToCreate": "Ready to Create Something Beautiful?",
+    "readyDescription": "Let's work together to capture your most precious moments. I'd love to hear your story and discuss how we can bring your vision to life.",
+    "startSession": "Start Your Session",
+    "viewServices": "View Services",
+    "stats": {
+      "experience": "Years of Experience",
+      "clients": "Happy Clients",
+      "sessions": "Photo Sessions",
+      "awards": "Awards Won"
+    },
+    "timeline": {
+      "2014": {
+        "title": "The Journey Begins",
+        "description": "Started photography as a hobby while working with horses, discovering my passion for capturing the bond between humans and animals."
+      },
+      "2016": {
+        "title": "Professional Certification",
+        "description": "Completed advanced photography certification and began taking on professional clients, specializing in equestrian photography."
+      },
+      "2018": {
+        "title": "Studio Launch",
+        "description": "Launched Visual Poetry Photography, expanding services to include portraits and business photography."
+      },
+      "2020": {
+        "title": "Award Recognition",
+        "description": "Received first major photography award for excellence in equestrian photography from the California Photography Society."
+      },
+      "2022": {
+        "title": "Digital Innovation",
+        "description": "Embraced cutting-edge digital techniques and expanded into lifestyle and event photography."
+      },
+      "2024": {
+        "title": "Continued Excellence",
+        "description": "Celebrating a decade of capturing memories and continuing to push creative boundaries in photography."
+      }
+    },
+    "values": {
+      "authenticMoments": {
+        "title": "Authentic Moments",
+        "description": "Capturing genuine emotions and natural interactions that tell your real story."
+      },
+      "personalConnection": {
+        "title": "Personal Connection",
+        "description": "Building relationships with clients to create comfortable, meaningful sessions."
+      },
+      "timelessQuality": {
+        "title": "Timeless Quality",
+        "description": "Creating photographs that will be treasured for generations to come."
+      }
+    }
   }
 }
