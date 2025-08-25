@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Camera } from 'lucide-react';
+import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import { Button, LanguageSwitcher } from '@/components/ui';
 import { useNavigationItems } from '@/lib/constants-i18n';
@@ -37,10 +37,18 @@ export const Header = () => {
         {/* Logo */}
         <Link
           href="/"
-          className="flex items-center space-x-2 md:space-x-3 text-deep-charcoal hover:text-gold-accent transition-colors touch-feedback"
+          className="flex items-center space-x-2 md:space-x-3 hover:opacity-80 transition-opacity touch-feedback"
         >
-          <Camera className="h-6 w-6 md:h-8 md:w-8" />
-          <div>
+          <div className="relative h-8 w-8 md:h-10 md:w-10">
+            <Image
+              src="/images/logo.jpg"
+              alt="Visual Poetry Photography Logo"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
+          <div className="text-deep-charcoal">
             <div className="font-serif text-lg md:text-xl font-bold">Visual Poetry</div>
             <div className="text-xs text-warm-gray -mt-1 hidden md:block">Photography</div>
           </div>

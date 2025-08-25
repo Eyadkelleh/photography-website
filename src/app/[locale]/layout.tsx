@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Playfair_Display, Lato } from "next/font/google";
+import { Playfair_Display, Lato, Great_Vibes } from "next/font/google";
 import "./globals.css";
 import { Header, Footer } from "@/components/layout";
 import { BottomNav } from "@/components/navigation/BottomNav";
@@ -18,6 +18,13 @@ const lato = Lato({
   variable: "--font-sans",
   subsets: ["latin"],
   weight: ["300", "400", "700", "900"],
+  display: "swap",
+});
+
+const greatVibes = Great_Vibes({
+  variable: "--font-script",
+  subsets: ["latin"],
+  weight: ["400"],
   display: "swap",
 });
 
@@ -90,7 +97,7 @@ export default async function LocaleLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body
-        className={`${playfairDisplay.variable} ${lato.variable} font-sans antialiased min-h-screen flex flex-col`}
+        className={`${playfairDisplay.variable} ${lato.variable} ${greatVibes.variable} font-sans antialiased min-h-screen flex flex-col`}
       >
         <NextIntlClientProvider messages={messages}>
           <ServiceWorkerProvider>

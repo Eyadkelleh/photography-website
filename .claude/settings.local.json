@@ -11,7 +11,8 @@
       "Bash(rm:*)",
       "Bash(npm install:*)",
       "Bash(mkdir:*)",
-      "Bash(mv:*)"
+      "Bash(mv:*)",
+      "Bash(cp:*)"
     ],
     "deny": []
   }

@@ -75,7 +75,7 @@ export default function AboutPage() {
                       PHOTOGRAPHER
                     </span>
                   </div>
-                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-deep-charcoal leading-tight tracking-tight">
+                  <h1 className="text-6xl md:text-7xl lg:text-8xl font-script text-deep-charcoal leading-tight" style={{fontFamily: "'Great Vibes', cursive"}}>
                     {t('title')}
                   </h1>
                   <p className="text-xl text-warm-gray/80 leading-relaxed max-w-2xl">
@@ -108,10 +108,10 @@ export default function AboutPage() {
             {/* Portrait */}
             <div className="lg:col-span-5">
               <div className="relative">
-                <div className="aspect-[3/4] relative overflow-hidden rounded-2xl bg-gray-100">
+                <div className="aspect-[4/5] relative overflow-hidden rounded-2xl bg-gray-100">
                   <Image
                     src="/images/about/photographer-portrait.jpg"
-                    alt="Uta, photographer at Visual Poetry Photography"
+                    alt="Uta, photographer with her dog among cherry blossoms"
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 42vw"
