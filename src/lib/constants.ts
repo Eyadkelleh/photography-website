@@ -1,11 +1,11 @@
 import { NavigationItem, Service, Package, Award, FAQ, SocialMediaLink } from '@/types';
 
 export const SITE_CONFIG = {
-  name: 'Visual Poetry Photography',
+  name: 'Wunderwerk Photography',
   description: 'Professional equestrian and portrait photography capturing authentic moments with love and artistry',
   tagline: 'Pure, authentic, professional, captured with lots of love',
   url: 'https://visualpoetry.photography',
-  email: 'hello@visualpoetry.photography',
+  email: 'wunderwerk.fotografie@web.de',
   phone: '+1 (555) 123-4567',
   location: 'Available throughout California',
 };
@@ -244,7 +244,7 @@ export const BOOKING_STEPS = [
 ];
 
 export const METADATA_DEFAULTS = {
-  title: 'Visual Poetry Photography | Professional Equestrian & Portrait Photography',
+  title: 'Wunderwerk Photography | Professional Equestrian & Portrait Photography',
   description: 'Award-winning photographer specializing in equestrian and portrait photography. Capturing authentic moments with artistry and love throughout California.',
   keywords: ['equestrian photography', 'portrait photography', 'professional photographer', 'California photographer', 'horse photography'],
   image: '/images/og-image.jpg',

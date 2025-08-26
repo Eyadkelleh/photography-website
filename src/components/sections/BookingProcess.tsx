@@ -8,40 +8,40 @@ import { Button } from '@/components/ui';
 const steps = [
   {
     id: 1,
-    title: 'Initial Consultation',
-    description: 'We discuss your vision, preferences, and session details to ensure we capture exactly what you envision.',
+    title: 'Erstberatung',
+    description: 'Wir besprechen Ihre Vision, Vorlieben und Details der Sitzung, um sicherzustellen, dass wir genau das einfangen, was Sie sich vorstellen.',
     icon: MessageCircle,
     color: 'text-soft-rose',
     bgColor: 'bg-soft-rose/10',
   },
   {
     id: 2,
-    title: 'Session Planning',
-    description: 'Location scouting, timing coordination, and creative direction planning for the perfect shoot.',
+    title: 'Sitzungsplanung',
+    description: 'Location-Scouting, Zeitabstimmung und kreative Ausrichtungsplanung für das perfekte Shooting.',
     icon: MapPin,
     color: 'text-sage-green',
     bgColor: 'bg-sage-green/10',
   },
   {
     id: 3,
-    title: 'Photography Session',
-    description: 'Professional photography session where we capture your unique moments with artistry and care.',
+    title: 'Fotoshooting',
+    description: 'Professionelle Fotositzung, bei der wir Ihre einzigartigen Momente mit Künstlerischem Geschick und Sorgfalt einfangen.',
     icon: Camera,
     color: 'text-gold-accent',
     bgColor: 'bg-gold-accent/10',
   },
   {
     id: 4,
-    title: 'Expert Editing',
-    description: 'Professional post-processing and image enhancement to bring out the best in every photograph.',
+    title: 'Professionelle Bearbeitung',
+    description: 'Professionelle Nachbearbeitung und Bildverbesserung, um das Beste aus jedem Foto herauszuholen.',
     icon: Edit,
     color: 'text-warm-brown',
     bgColor: 'bg-warm-brown/10',
   },
   {
     id: 5,
-    title: 'Gallery Delivery',
-    description: 'High-resolution images delivered through your private online gallery for easy access and sharing.',
+    title: 'Galerie-Übergabe',
+    description: 'Hochauflösende Bilder, die über Ihre private Online-Galerie für einfachen Zugang und Teilen bereitgestellt werden.',
     icon: ImageIcon,
     color: 'text-deep-charcoal',
     bgColor: 'bg-deep-charcoal/10',
@@ -59,12 +59,12 @@ export const BookingProcess = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-deep-charcoal mb-6">
-            Our Process
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-script font-medium text-deep-charcoal mb-6">
+            Unser Prozess
           </h2>
           <p className="text-lg md:text-xl text-warm-gray max-w-3xl mx-auto leading-relaxed">
-            From initial consultation to final delivery, we ensure a seamless and 
-            enjoyable experience that results in stunning photography.
+            Von der Erstberatung bis zur finalen Übergabe gewährleisten wir ein nahtloses und 
+            angenehmes Erlebnis, das in atemberaubender Fotografie resultiert.
           </p>
         </motion.div>
 
@@ -94,7 +94,7 @@ export const BookingProcess = () => {
                       <Icon className={`h-8 w-8 ${step.color}`} />
                     </div>
                     <h3 className="text-2xl font-serif font-semibold text-deep-charcoal mb-4">
-                      Step {step.id}: {step.title}
+                      Schritt {step.id}: {step.title}
                     </h3>
                     <p className="text-warm-gray leading-relaxed max-w-md mx-auto lg:mx-0">
                       {step.description}
@@ -124,21 +124,21 @@ export const BookingProcess = () => {
         >
           <div className="bg-cream rounded-2xl p-8 md:p-12 max-w-3xl mx-auto">
             <h3 className="text-2xl md:text-3xl font-serif font-semibold text-deep-charcoal mb-4">
-              Ready to Begin Your Journey?
+              Bereit, Ihre Reise zu beginnen?
             </h3>
             <p className="text-warm-gray mb-8 leading-relaxed">
-              Let&apos;s create something beautiful together. Book your consultation today 
-              and take the first step toward capturing your most precious moments.
+              Lassen Sie uns gemeinsam etwas Schönes erschaffen. Buchen Sie heute Ihre Beratung 
+              und machen Sie den ersten Schritt zum Einfangen Ihrer kostbarsten Momente.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild>
                 <Link href="/contact">
-                  Start Your Session
+                  Sitzung beginnen
                 </Link>
               </Button>
               <Button variant="secondary" size="lg" asChild>
                 <Link href="/services">
-                  View Packages
+                  Pakete ansehen
                 </Link>
               </Button>
             </div>

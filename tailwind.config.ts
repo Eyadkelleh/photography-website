@@ -22,7 +22,7 @@ const config: Config = {
       fontFamily: {
         'serif': ['Playfair Display', 'serif'],
         'sans': ['Lato', 'sans-serif'],
-        'script': ['Great Vibes', 'cursive'],
+        'script': ['Baby Dandelia', 'Dancing Script', 'cursive'],
       },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-out',

@@ -79,12 +79,12 @@ export const PortfolioPreview = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-deep-charcoal mb-6">
-            Portfolio Highlights
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-script font-medium text-deep-charcoal mb-6">
+            Portfolio Höhepunkte
           </h2>
           <p className="text-lg md:text-xl text-warm-gray max-w-3xl mx-auto leading-relaxed">
-            A curated selection of our finest work, showcasing the beauty and 
-            emotion we capture in every session.
+            Eine kuratierte Auswahl unserer besten Arbeiten, die die Schönheit und 
+            Emotion zeigt, die wir in jeder Sitzung einfangen.
           </p>
         </motion.div>
 
@@ -145,7 +145,12 @@ export const PortfolioPreview = () => {
                 </div>
                 <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <p className="text-sm font-medium capitalize">
-                    {image.category} Photography
+                    {image.category === 'equestrian' ? 'Pferdefotografie' : 
+                     image.category === 'portrait' ? 'Porträtfotografie' : 
+                     image.category === 'business' ? 'Businessfotografie' : 
+                     image.category === 'event' ? 'Eventfotografie' : 
+                     image.category === 'lifestyle' ? 'Lifestylefotografie' : 
+                     image.category + ' Fotografie'}
                   </p>
                 </div>
               </motion.div>
@@ -162,7 +167,7 @@ export const PortfolioPreview = () => {
         >
           <Button size="lg" asChild>
             <Link href="/portfolio">
-              View Full Portfolio
+              Vollständiges Portfolio ansehen
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </Button>

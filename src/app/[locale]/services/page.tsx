@@ -60,93 +60,24 @@ export default function ServicesPage() {
         <div className="absolute inset-0 bg-black/20" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold mb-6 leading-tight">
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-script font-medium mb-6 leading-tight">
               {t('title')}
             </h1>
             <p className="text-xl md:text-2xl text-warm-white/90 mb-12 leading-relaxed">
               {t('subtitle')}
             </p>
-            <Button size="lg" className="bg-gold-accent text-deep-charcoal hover:bg-yellow-500" asChild>
+            <Button size="lg" className="bg-gold-accent text-deep-charcoal hover:bg-cyan-400 hover:text-white hover:shadow-xl hover:shadow-cyan-500/50 transition-all duration-200" asChild>
               <Link href="#packages">{t('viewPackages')}</Link>
             </Button>
           </div>
         </div>
       </section>
 
-      <section className="py-24 bg-warm-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-deep-charcoal mb-6">
-              {t('ourServices')}
-            </h2>
-            <p className="text-lg text-warm-gray max-w-3xl mx-auto leading-relaxed">
-              {t('servicesDescription')}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {services.map((service) => (
-              <Card key={service.id} id={service.id} hover className="group">
-                <div className="relative h-80 overflow-hidden rounded-t-xl">
-                  <Image
-                    src={service.image}
-                    alt={service.name}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                  {service.popular && (
-                    <div className="absolute top-6 left-6 bg-gold-accent text-deep-charcoal px-4 py-2 rounded-full font-semibold">
-                      {t('mostPopular')}
-                    </div>
-                  )}
-                  <div className="absolute bottom-6 left-6 right-6">
-                    <div className="flex items-center justify-between text-white">
-                      <div className="flex items-center space-x-4">
-                        <div className="flex items-center text-sm">
-                          <Clock className="h-4 w-4 mr-2" />
-                          {service.duration}
-                        </div>
-                        <div className="flex items-center text-lg font-semibold">
-                          <DollarSign className="h-4 w-4 mr-1" />
-                          {service.price.replace('From $', '')}+
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-serif font-bold text-deep-charcoal mb-4">
-                    {service.name}
-                  </h3>
-                  <p className="text-warm-gray mb-6 leading-relaxed">
-                    {service.description}
-                  </p>
-                  <div className="space-y-3 mb-8">
-                    {service.features.map((feature, index) => (
-                      <div key={index} className="flex items-center space-x-3">
-                        <Check className="h-5 w-5 text-gold-accent flex-shrink-0" />
-                        <span className="text-warm-gray">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <Button className="w-full group-hover:bg-gold-accent group-hover:text-deep-charcoal" asChild>
-                    <Link href={`/contact?service=${service.id}`}>
-                      {t('bookService')}
-                    </Link>
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section id="packages" className="py-24 bg-cream">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-deep-charcoal mb-6">
+            <h2 className="text-5xl md:text-6xl font-script font-medium text-deep-charcoal mb-6">
               {t('photographyPackages')}
             </h2>
             <p className="text-lg text-warm-gray max-w-3xl mx-auto leading-relaxed">
@@ -157,21 +88,29 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {packages.map((pkg) => (
               <Card key={pkg.id} hover className={`relative group ${pkg.popular ? 'ring-2 ring-gold-accent' : ''}`}>
-                {pkg.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-gold-accent text-deep-charcoal px-6 py-2 rounded-full font-semibold text-sm">
-                      {t('mostPopular')}
+                <CardHeader className="text-center pb-4 relative pt-12">
+                  {pkg.popular && (
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                      <div className="relative group">
+                        <div className="bg-gradient-to-r from-gold-accent via-yellow-400 to-gold-accent text-deep-charcoal px-3 py-1 rounded-full font-bold text-xs shadow-lg border-2 border-white backdrop-blur-sm">
+                          <div className="absolute inset-0 bg-gradient-to-r from-gold-accent via-yellow-400 to-gold-accent rounded-full blur-sm opacity-30 animate-pulse"></div>
+                          <span className="relative z-10 flex items-center gap-1">
+                            <svg className="w-3 h-3 animate-bounce" fill="currentColor" viewBox="0 0 20 20">
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            {t('mostPopular')}
+                          </span>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                )}
-                <CardHeader className="text-center pb-4">
+                  )}
                   <CardTitle className="text-2xl font-serif mb-2">{pkg.name}</CardTitle>
                   <div className="space-y-2">
                     <div className="text-4xl font-bold text-gold-accent">
                       {pkg.price}
-                      {pkg.originalPrice && (
+                      {(pkg as any).originalPrice && (
                         <span className="text-lg text-warm-gray line-through ml-2">
-                          {pkg.originalPrice}
+                          {(pkg as any).originalPrice}
                         </span>
                       )}
                     </div>
@@ -223,7 +162,7 @@ export default function ServicesPage() {
                   </div>
 
                   <Button 
-                    className={`w-full ${pkg.popular ? 'bg-gold-accent text-deep-charcoal hover:bg-yellow-500' : ''}`}
+                    className={`w-full transition-all duration-200 ${pkg.popular ? 'bg-gold-accent text-deep-charcoal hover:bg-cyan-400 hover:text-white hover:shadow-xl hover:shadow-cyan-500/50 hover:scale-105' : 'hover:bg-teal-400 hover:text-white hover:shadow-lg'}`}
                     asChild
                   >
                     <Link href={`/contact?package=${pkg.id}`}>
@@ -239,7 +178,7 @@ export default function ServicesPage() {
             <p className="text-warm-gray mb-6">
               {t('customDescription')}
             </p>
-            <Button variant="secondary" size="lg" asChild>
+            <Button variant="secondary" size="lg" className="hover:bg-teal-400 hover:text-white hover:shadow-xl hover:shadow-teal-500/50 transition-all duration-200" asChild>
               <Link href="/contact?custom=true">{t('customQuote')}</Link>
             </Button>
           </div>
@@ -341,17 +280,17 @@ export default function ServicesPage() {
 
       <section className="py-24 bg-deep-charcoal text-warm-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">
+          <h2 className="text-5xl md:text-6xl font-script font-medium mb-6">
             {t('readyToBook')}
           </h2>
           <p className="text-xl text-warm-white/80 max-w-3xl mx-auto mb-12 leading-relaxed">
             {t('readyDescription')}
           </p>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <Button size="lg" className="bg-gold-accent text-deep-charcoal hover:bg-yellow-500" asChild>
+            <Button size="lg" className="bg-gold-accent text-deep-charcoal hover:bg-cyan-400 hover:text-white hover:shadow-xl hover:shadow-cyan-500/50 transition-all duration-200" asChild>
               <Link href="/contact">{t('getStarted')}</Link>
             </Button>
-            <Button variant="secondary" size="lg" className="border-warm-white text-warm-white hover:bg-warm-white hover:text-deep-charcoal" asChild>
+            <Button variant="secondary" size="lg" className="border-warm-white text-warm-white hover:bg-emerald-400 hover:text-white hover:border-emerald-400 hover:shadow-xl hover:shadow-emerald-500/50 transition-all duration-200" asChild>
               <Link href="/portfolio">{t('viewWork')}</Link>
             </Button>
           </div>

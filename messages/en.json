@@ -97,6 +97,15 @@
       "features": ["8-hour session", "150+ edited images", "Online gallery", "Print release", "Same-day preview"],
       "includes": ["Pre-session consultation", "Professional editing", "Digital delivery", "USB drive", "Premium album"],
       "deliverables": ["High-resolution images", "Web-optimized versions", "Print-ready files", "Social media formats", "Premium prints"]
+    },
+    "special": {
+      "name": "Traces of Light – Farewell Companion",
+      "price": "Upon Request",
+      "description": "Sensitive rainbow shootings for humans & animals",
+      "duration": "As needed",
+      "features": ["Still. Dignified. Authentic.", "Short-notice bookings available", "At home or favorite location", "Compassionate guidance"],
+      "includes": ["Individual consultation", "Flexible scheduling", "Sensitive support"],
+      "deliverables": ["Prices & details upon request", "Here, heart matters, not the clock"]
     }
   },
   "awards": {

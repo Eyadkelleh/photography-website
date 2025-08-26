@@ -57,14 +57,14 @@ export const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 leading-tight">
-            Visuelle Poesie
+          <h1 className="font-script text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-medium mb-6 leading-tight">
+            Wunderwerk
           </h1>
           <p className="text-lg md:text-xl lg:text-2xl mb-4 text-white/90 max-w-3xl mx-auto">
-            Pure, authentic, professional
+            Rein, authentisch, professionell
           </p>
           <p className="text-base md:text-lg lg:text-xl mb-12 text-white/80 max-w-2xl mx-auto">
-            Captured with lots of love
+            Mit viel Liebe festgehalten
           </p>
         </motion.div>
 
@@ -76,12 +76,12 @@ export const HeroSection = () => {
         >
           <Button size="lg" className="text-lg px-8 py-4" asChild>
             <Link href="/contact">
-              Book Your Unforgettable Day Now
+              Buchen Sie Ihren unvergesslichen Tag
             </Link>
           </Button>
           <Button variant="secondary" size="lg" className="text-lg px-8 py-4 bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white hover:text-deep-charcoal">
             <Play className="mr-2 h-5 w-5" />
-            Watch Our Story
+            Unsere Geschichte
           </Button>
         </motion.div>
 
@@ -95,7 +95,7 @@ export const HeroSection = () => {
             href="#services"
             className="flex flex-col items-center text-white/80 hover:text-white transition-colors group"
           >
-            <span className="text-sm mb-2">Discover More</span>
+            <span className="text-sm mb-2">Mehr entdecken</span>
             <ArrowDown className="h-6 w-6 animate-bounce group-hover:scale-110 transition-transform" />
           </Link>
         </motion.div>

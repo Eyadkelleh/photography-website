@@ -26,6 +26,7 @@ export interface Package {
   duration: string;
   deliverables: string[];
   popular?: boolean;
+  special?: boolean;
 }
 
 export interface GalleryImage {

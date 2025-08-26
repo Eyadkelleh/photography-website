@@ -18,8 +18,8 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="space-y-6">
             <div>
-              <h3 className="font-serif text-2xl font-bold text-gold-accent mb-2">
-                Visual Poetry
+              <h3 className="font-script text-2xl font-bold text-gold-accent mb-2">
+                Wunderwerk
               </h3>
               <p className="text-sm text-warm-white/80 leading-relaxed">
                 {SITE_CONFIG.description}
@@ -138,7 +138,7 @@ export const Footer = () => {
         <div className="border-t border-warm-white/20 mt-12 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <div className="text-sm text-warm-white/60">
-              © {currentYear} Visual Poetry Photography. All rights reserved.
+              © {currentYear} Wunderwerk Photography. All rights reserved.
             </div>
             <div className="flex items-center space-x-6 text-sm">
               <Link

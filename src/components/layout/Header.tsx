@@ -49,7 +49,7 @@ export const Header = () => {
             />
           </div>
           <div className="text-deep-charcoal">
-            <div className="font-serif text-lg md:text-xl font-bold">Visual Poetry</div>
+            <div className="font-script text-lg md:text-xl font-bold">Wunderwerk</div>
             <div className="text-xs text-warm-gray -mt-1 hidden md:block">Photography</div>
           </div>
         </Link>

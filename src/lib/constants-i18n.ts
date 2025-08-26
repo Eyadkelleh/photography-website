@@ -113,7 +113,6 @@ export function usePackages() {
       id: 'premium',
       name: t('premium.name'),
       price: t('premium.price'),
-      originalPrice: t('premium.originalPrice'),
       description: t('premium.description'),
       duration: t('premium.duration'),
       features: t.raw('premium.features') as string[],
@@ -130,6 +129,17 @@ export function usePackages() {
       features: t.raw('luxury.features') as string[],
       includes: t.raw('luxury.includes') as string[],
       deliverables: t.raw('luxury.deliverables') as string[],
+    },
+    {
+      id: 'special',
+      name: t('special.name'),
+      price: t('special.price'),
+      description: t('special.description'),
+      duration: t('special.duration'),
+      features: t.raw('special.features') as string[],
+      includes: t.raw('special.includes') as string[],
+      deliverables: t.raw('special.deliverables') as string[],
+      special: true,
     },
   ];
 }

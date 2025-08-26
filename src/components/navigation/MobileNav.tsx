@@ -185,10 +185,10 @@ export const MobileNav: React.FC<MobileNavProps> = ({ className }) => {
           </p>
           <p>
             <a
-              href="mailto:hello@photographer.com"
+              href="mailto:wunderwerk.fotografie@web.de"
               className="hover:text-gold-accent transition-colors"
             >
-              ✉️ hello@photographer.com
+              ✉️ wunderwerk.fotografie@web.de
             </a>
           </p>
         </div>

@@ -1,11 +1,11 @@
 {
   "site": {
-    "name": "Visual Poetry Photography",
-    "description": "Professionelle Reit- und Portraitfotografie, die authentische Momente mit Liebe und Kunstfertigkeit einfängt",
+    "name": "Wunderwerk Fotografie",
+    "description": "Professionelle Fotografie, die authentische Momente mit Liebe und Kunstfertigkeit einfängt",
     "tagline": "Rein, authentisch, professionell, mit viel Liebe aufgenommen",
-    "email": "hello@visualpoetry.photography",
-    "phone": "+1 (555) 123-4567",
-    "location": "Verfügbar in ganz Kalifornien"
+    "email": "hello@wunderwerk-fotografie.de",
+    "phone": "+49 (0) 123 456789",
+    "location": "Verfügbar deutschlandweit"
   },
   "navigation": {
     "home": "Startseite",
@@ -71,32 +71,41 @@
   },
   "packages": {
     "essential": {
-      "name": "Essential-Paket",
-      "price": "750€",
-      "description": "Perfekt für individuelle Sessions und kleinere Events",
-      "duration": "2 Stunden",
-      "features": ["2-Stunden-Session", "30 bearbeitete Bilder", "Online-Galerie", "Druckfreigabe"],
-      "includes": ["Vor-Session Beratung", "Professionelle Bearbeitung", "Digitale Lieferung"],
-      "deliverables": ["Hochauflösende Bilder", "Web-optimierte Versionen", "Druckfertige Dateien"]
+      "name": "MINI-MOMENTE",
+      "price": "99€",
+      "description": "30 Minuten Shooting für die besonderen kleinen Augenblicke",
+      "duration": "30 Minuten",
+      "features": ["30 Minuten Shooting", "2 professionell bearbeitete Bilder inklusive", "Auswahl aus einer Online-Galerie", "Hochauflösend & weboptimiert zum Download"],
+      "includes": ["Online-Galerie zur Auswahl", "Professionelle Bearbeitung"],
+      "deliverables": ["2 bearbeitete Bilder", "Jedes weitere Bild: 18€"]
     },
     "premium": {
-      "name": "Premium-Paket", 
-      "price": "1.250€",
-      "originalPrice": "1.450€",
-      "description": "Die beliebteste Wahl für umfassende Abdeckung",
-      "duration": "4 Stunden",
-      "features": ["4-Stunden-Session", "75 bearbeitete Bilder", "Online-Galerie", "Druckfreigabe", "Express-Lieferung"],
-      "includes": ["Vor-Session Beratung", "Professionelle Bearbeitung", "Digitale Lieferung", "USB-Stick"],
-      "deliverables": ["Hochauflösende Bilder", "Web-optimierte Versionen", "Druckfertige Dateien", "Social-Media-Formate"]
+      "name": "HERZSTÜCK-SHOOTING", 
+      "price": "169€",
+      "description": "Begleitung mit Zeit, Ruhe & viel Gefühl",
+      "duration": "60-75 Minuten",
+      "features": ["ca. 60–75 Minuten Shooting", "5 Bilder inklusive", "Online-Galerie zur Auswahl", "Begleitung mit Zeit, Ruhe & viel Gefühl"],
+      "includes": ["Online-Galerie zur Auswahl", "Professionelle Bearbeitung"],
+      "deliverables": ["5 bearbeitete Bilder", "Jedes weitere Bild: 16€", "5 Zusatzbilder: +75€"],
+      "popular": true
     },
     "luxury": {
-      "name": "Luxus-Paket",
-      "price": "2.200€", 
-      "description": "Vollständige Abdeckung mit Premium-Services",
-      "duration": "8 Stunden",
-      "features": ["8-Stunden-Session", "150+ bearbeitete Bilder", "Online-Galerie", "Druckfreigabe", "Vorschau am selben Tag"],
-      "includes": ["Vor-Session Beratung", "Professionelle Bearbeitung", "Digitale Lieferung", "USB-Stick", "Premium-Album"],
-      "deliverables": ["Hochauflösende Bilder", "Web-optimierte Versionen", "Druckfertige Dateien", "Social-Media-Formate", "Premium-Drucke"]
+      "name": "SEELENZEIT (Intensiv-Shooting)",
+      "price": "229€", 
+      "description": "Persönlich, emotional, individuell",
+      "duration": "bis zu 2 Stunden",
+      "features": ["bis zu 2 Stunden Shooting", "8 Bilder inklusive", "auf Wunsch mit Print in hochwertiger Hülle (+10€)", "Galerie zur Auswahl", "Persönlich, emotional, individuell"],
+      "includes": ["Online-Galerie zur Auswahl", "Professionelle Bearbeitung", "Optional: Print in hochwertiger Hülle (+10€)"],
+      "deliverables": ["8 bearbeitete Bilder", "Jedes weitere Bild: 15€", "5 Zusatzbilder: +70€"]
+    },
+    "special": {
+      "name": "Spuren aus Licht – Abschiedsbegleitung",
+      "price": "Auf Anfrage",
+      "description": "Einfühlsame Regenbogen-Shootings für Mensch & Tier",
+      "duration": "Nach Bedarf",
+      "features": ["Still. Würdevoll. Echt.", "Kurzfristig buchbar", "Zuhause oder an einem Lieblingsort", "Einfühlsame Begleitung"],
+      "includes": ["Individuelle Beratung", "Flexible Terminplanung", "Sensible Betreuung"],
+      "deliverables": ["Preise & Details auf Anfrage", "Hier zählt Herz, nicht die Uhr"]
     }
   },
   "awards": {

@@ -14,8 +14,8 @@ const testimonials = [
     location: 'Napa Valley, CA',
     image: '/images/testimonials/client-1.jpg',
     rating: 5,
-    text: 'Visual Poetry Photography exceeded all our expectations. Their ability to capture the authentic connection between my horse and me was simply magical. Every photo tells a story and brings back the emotions of that perfect day.',
-    service: 'Equestrian Photography',
+    text: 'Wunderwerk Photography übertraf alle unsere Erwartungen. Ihre Fähigkeit, die authentische Verbindung zwischen meinem Pferd und mir einzufangen, war einfach magisch. Jedes Foto erzählt eine Geschichte und bringt die Emotionen jenes perfekten Tages zurück.',
+    service: 'Pferdefotografie',
   },
   {
     id: '2',
@@ -23,8 +23,8 @@ const testimonials = [
     location: 'San Francisco, CA',
     image: '/images/testimonials/client-2.jpg',
     rating: 5,
-    text: 'Professional, creative, and incredibly talented. The team made our corporate headshot session effortless and fun. The results speak for themselves - these photos have transformed our brand image.',
-    service: 'Business Photography',
+    text: 'Professionell, kreativ und unglaublich talentiert. Das Team machte unser Unternehmens-Fotoshooting mühelos und vergnüglich. Die Ergebnisse sprechen für sich - diese Fotos haben unser Markenimage transformiert.',
+    service: 'Businessfotografie',
   },
   {
     id: '3',
@@ -32,8 +32,8 @@ const testimonials = [
     location: 'Los Angeles, CA',
     image: '/images/testimonials/client-3.jpg',
     rating: 5,
-    text: 'From our first consultation to the final delivery, everything was perfect. The photographer has an incredible eye for capturing genuine moments. Our family portraits are now treasured heirlooms.',
-    service: 'Portrait Photography',
+    text: 'Von unserem ersten Beratungsgespräch bis zur finalen Übergabe war alles perfekt. Der Fotograf hat ein unglaubliches Auge für das Einfangen echter Momente. Unsere Familienporträts sind nun geschätzte Erbstücke.',
+    service: 'Porträtfotografie',
   },
   {
     id: '4',
@@ -41,8 +41,8 @@ const testimonials = [
     location: 'Sacramento, CA',
     image: '/images/testimonials/client-4.jpg',
     rating: 5,
-    text: 'We hired Visual Poetry for our wedding, and they captured every moment beautifully. Their artistic vision and attention to detail is unmatched. We relive our special day through these incredible photos.',
-    service: 'Event Photography',
+    text: 'Wir haben Wunderwerk für unsere Hochzeit engagiert und sie haben jeden Moment wunderschön eingefangen. Ihre künstlerische Vision und Liebe zum Detail ist unvergleichlich. Wir erleben unseren besonderen Tag durch diese unglaublichen Fotos immer wieder.',
+    service: 'Eventfotografie',
   },
 ];
 
@@ -85,12 +85,12 @@ export const TestimonialsSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-deep-charcoal mb-6">
-            Client Stories
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-script font-medium text-deep-charcoal mb-6">
+            Kundenstimmen
           </h2>
           <p className="text-lg md:text-xl text-warm-gray max-w-3xl mx-auto leading-relaxed">
-            Don&apos;t just take our word for it. Here&apos;s what our clients have to say 
-            about their experience with Visual Poetry Photography.
+            Verlassen Sie sich nicht nur auf unser Wort. Hier ist, was unsere Kunden 
+            über ihre Erfahrung mit Wunderwerk Photography zu sagen haben.
           </p>
         </motion.div>
 
@@ -183,7 +183,7 @@ export const TestimonialsSection = () => {
         >
           <Button size="lg" asChild>
             <Link href="/testimonials">
-              Read More Stories
+              Weitere Geschichten lesen
             </Link>
           </Button>
         </motion.div>

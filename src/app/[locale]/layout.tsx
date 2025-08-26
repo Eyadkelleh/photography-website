@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Playfair_Display, Lato, Great_Vibes } from "next/font/google";
+import { Playfair_Display, Lato, Dancing_Script } from "next/font/google";
 import "./globals.css";
 import { Header, Footer } from "@/components/layout";
 import { BottomNav } from "@/components/navigation/BottomNav";
@@ -21,10 +21,10 @@ const lato = Lato({
   display: "swap",
 });
 
-const greatVibes = Great_Vibes({
+const dancingScript = Dancing_Script({
   variable: "--font-script",
   subsets: ["latin"],
-  weight: ["400"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -92,12 +92,15 @@ export default async function LocaleLayout({
         <meta name="apple-mobile-web-app-title" content="Visual Poetry" />
         <link rel="apple-touch-icon" href="/icons/icon-192.png" />
         
+        {/* Custom font preloading for performance */}
+        <link rel="preload" href="/fonts/Baby Dandelia Demo.ttf" as="font" type="font/truetype" crossOrigin="anonymous" />
+        
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body
-        className={`${playfairDisplay.variable} ${lato.variable} ${greatVibes.variable} font-sans antialiased min-h-screen flex flex-col`}
+        className={`${playfairDisplay.variable} ${lato.variable} ${dancingScript.variable} font-sans antialiased min-h-screen flex flex-col`}
       >
         <NextIntlClientProvider messages={messages}>
           <ServiceWorkerProvider>
