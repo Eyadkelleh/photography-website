@@ -12,7 +12,12 @@
       "Bash(npm install:*)",
       "Bash(mkdir:*)",
       "Bash(mv:*)",
-      "Bash(cp:*)"
+      "Bash(cp:*)",
+      "mcp__context7__resolve-library-id",
+      "mcp__render__list_services",
+      "mcp__context7__get-library-docs",
+      "mcp__render__list_workspaces",
+      "mcp__render__list_deploys"
     ],
     "deny": []
   }
