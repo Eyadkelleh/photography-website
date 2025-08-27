@@ -79,11 +79,10 @@ export const HeroSection = () => {
   };
 
   const transition = {
-    type: "spring",
+    type: "spring" as const,
     stiffness: 400,
     damping: 40,
     mass: 1,
-    duration: 1.2,
   };
 
   return (

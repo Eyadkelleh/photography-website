@@ -157,7 +157,7 @@ export const BookingProcess = () => {
               return (
                 <motion.div
                   key={step.id}
-                  ref={(el) => (stepRefs.current[index] = el)}
+                  ref={(el) => { stepRefs.current[index] = el; }}
                   initial={{ opacity: 0, x: isEven ? -50 : 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ 

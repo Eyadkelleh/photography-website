@@ -196,7 +196,7 @@ export default function ContactPage() {
               Jeder Moment ist einzigartig, jede Geschichte ist besonders. Lassen Sie uns Ihre gemeinsam einfangen.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button size="xl" className="bg-gradient-to-r from-gold-accent to-amber-500 text-deep-charcoal font-semibold hover:from-gold-accent/90 hover:to-amber-500/90 hover:shadow-xl hover:shadow-gold-accent/30 hover:scale-[1.02] transition-all duration-300 border border-gold-accent/20 min-h-[52px] px-10 py-4 rounded-xl" asChild>
+              <Button size="lg" className="bg-gradient-to-r from-gold-accent to-amber-500 text-deep-charcoal font-semibold hover:from-gold-accent/90 hover:to-amber-500/90 hover:shadow-xl hover:shadow-gold-accent/30 hover:scale-[1.02] transition-all duration-300 border border-gold-accent/20 min-h-[52px] px-10 py-4 rounded-xl" asChild>
                 <Link href={`mailto:${SITE_CONFIG.email}`}>
                   <div className="flex items-center gap-3">
                     <Mail className="h-5 w-5" />
@@ -204,7 +204,7 @@ export default function ContactPage() {
                   </div>
                 </Link>
               </Button>
-              <Button variant="outline" size="xl" className="border-2 border-warm-white/30 text-warm-white font-semibold hover:bg-warm-white hover:text-deep-charcoal hover:shadow-xl hover:shadow-warm-white/20 hover:scale-[1.02] transition-all duration-300 backdrop-blur-sm bg-white/5 min-h-[52px] px-10 py-4 rounded-xl" asChild>
+              <Button variant="secondary" size="lg" className="border-2 border-warm-white/30 text-warm-white font-semibold hover:bg-warm-white hover:text-deep-charcoal hover:shadow-xl hover:shadow-warm-white/20 hover:scale-[1.02] transition-all duration-300 backdrop-blur-sm bg-white/5 min-h-[52px] px-10 py-4 rounded-xl" asChild>
                 <Link href="/portfolio">
                   <div className="flex items-center gap-3">
                     <Eye className="h-5 w-5" />
