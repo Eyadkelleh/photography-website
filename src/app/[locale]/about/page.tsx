@@ -78,7 +78,7 @@ export default function AboutPage() {
                   <h1 className="text-6xl md:text-7xl lg:text-8xl font-script text-deep-charcoal leading-tight">
                     {t('title')}
                   </h1>
-                  <p className="text-xl text-warm-gray/80 leading-relaxed max-w-2xl">
+                  <p className="text-xl text-warm-gray/80 leading-relaxed max-w-2xl mt-8">
                     {t('subtitle')}
                   </p>
                 </div>

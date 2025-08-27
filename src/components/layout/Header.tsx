@@ -55,31 +55,39 @@ export const Header = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center space-x-8">
+        <nav className="hidden lg:flex items-center space-x-2">
           {navigationItems.map((item) => (
             <Link
               key={item.name}
               href={item.href}
               className={cn(
-                'text-sm font-medium transition-colors hover:text-gold-accent',
+                'relative px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 group',
+                'hover:bg-gold-accent/10 hover:text-gold-accent',
                 pathname === item.href
-                  ? 'text-gold-accent'
+                  ? 'text-gold-accent bg-gold-accent/10'
                   : 'text-deep-charcoal'
               )}
             >
               {item.name}
+              {/* Active indicator */}
+              {pathname === item.href && (
+                <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-gold-accent rounded-full" />
+              )}
+              {/* Hover effect */}
+              <span className="absolute inset-0 rounded-lg bg-gold-accent/5 scale-0 group-hover:scale-100 transition-transform duration-300" />
             </Link>
           ))}
         </nav>
 
         {/* Desktop CTA Buttons */}
-        <div className="hidden lg:flex items-center space-x-4">
+        <div className="hidden lg:flex items-center space-x-3">
           <LanguageSwitcher />
+          <div className="h-6 w-px bg-warm-gray/20 mx-2" />
           <PhotoButton 
             href="/portfolio"
             variant="secondary"
             icon="eye"
-            className="min-w-[140px]"
+            className="min-w-[140px] shadow-sm hover:shadow-md transition-shadow duration-300"
           >
             Portfolio ansehen
           </PhotoButton>
@@ -87,7 +95,7 @@ export const Header = () => {
             href="/contact"
             variant="primary"
             icon="camera"
-            className="min-w-[140px]"
+            className="min-w-[140px] shadow-lg hover:shadow-xl transition-shadow duration-300"
           >
             Session buchen
           </PhotoButton>

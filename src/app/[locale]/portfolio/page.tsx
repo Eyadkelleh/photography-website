@@ -146,10 +146,10 @@ export default function PortfolioPage() {
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-deep-charcoal mb-6">
+            <h1 className="font-script text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-medium text-deep-charcoal mb-6">
               Portfolio
             </h1>
-            <p className="text-xl md:text-2xl text-warm-gray leading-relaxed mb-8">
+            <p className="text-xl md:text-2xl text-warm-gray leading-relaxed mb-8 mt-16">
               A curated collection of our finest work, showcasing the artistry and emotion 
               we capture in every moment.
             </p>
@@ -162,15 +162,16 @@ export default function PortfolioPage() {
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-4">
             {GALLERY_CATEGORIES.map((category) => (
-              <Button
+              <PhotoButton
                 key={category.value}
-                variant={activeCategory === category.value ? 'primary' : 'text'}
+                variant={activeCategory === category.value ? 'primary' : 'secondary'}
+                icon="eye"
                 size="sm"
                 onClick={() => setActiveCategory(category.value)}
-                className="capitalize"
+                className="capitalize min-w-[100px]"
               >
                 {category.label}
-              </Button>
+              </PhotoButton>
             ))}
           </div>
         </div>
@@ -209,18 +210,22 @@ export default function PortfolioPage() {
                   {/* Hover Actions */}
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
                     <div className="flex space-x-3">
-                      <Button
+                      <PhotoButton
+                        variant="secondary"
+                        icon="eye"
                         size="sm"
-                        className="bg-white/20 backdrop-blur-sm hover:bg-white/30 border border-white/20"
+                        className="bg-white/20 backdrop-blur-sm hover:bg-white/30 border border-white/20 text-white"
                       >
-                        <Eye className="h-4 w-4" />
-                      </Button>
-                      <Button
+                        <span className="sr-only">View</span>
+                      </PhotoButton>
+                      <PhotoButton
+                        variant="secondary"
+                        icon="focus"
                         size="sm"
-                        className="bg-white/20 backdrop-blur-sm hover:bg-white/30 border border-white/20"
+                        className="bg-white/20 backdrop-blur-sm hover:bg-white/30 border border-white/20 text-white"
                       >
-                        <Heart className="h-4 w-4" />
-                      </Button>
+                        <span className="sr-only">Favorite</span>
+                      </PhotoButton>
                     </div>
                   </div>
                   
@@ -249,39 +254,42 @@ export default function PortfolioPage() {
             onClick={closeLightbox}
           >
             {/* Close Button */}
-            <Button
-              variant="ghost"
+            <PhotoButton
+              variant="secondary"
+              icon="focus"
               size="sm"
               onClick={closeLightbox}
-              className="absolute top-6 right-6 z-60 text-white hover:bg-white/10"
+              className="absolute top-6 right-6 z-60 bg-black/50 text-white hover:bg-white/10 backdrop-blur-sm"
             >
-              <X className="h-6 w-6" />
-            </Button>
+              <span className="sr-only">Close</span>
+            </PhotoButton>
 
             {/* Navigation Buttons */}
-            <Button
-              variant="ghost"
+            <PhotoButton
+              variant="secondary"
+              icon="eye"
               size="sm"
               onClick={(e) => {
                 e.stopPropagation();
                 navigateImage('prev');
               }}
-              className="absolute left-6 top-1/2 -translate-y-1/2 z-60 text-white hover:bg-white/10"
+              className="absolute left-6 top-1/2 -translate-y-1/2 z-60 bg-black/50 text-white hover:bg-white/10 backdrop-blur-sm"
             >
-              <ChevronLeft className="h-8 w-8" />
-            </Button>
+              <span className="sr-only">Previous</span>
+            </PhotoButton>
 
-            <Button
-              variant="ghost"
+            <PhotoButton
+              variant="secondary"
+              icon="eye"
               size="sm"
               onClick={(e) => {
                 e.stopPropagation();
                 navigateImage('next');
               }}
-              className="absolute right-6 top-1/2 -translate-y-1/2 z-60 text-white hover:bg-white/10"
+              className="absolute right-6 top-1/2 -translate-y-1/2 z-60 bg-black/50 text-white hover:bg-white/10 backdrop-blur-sm"
             >
-              <ChevronRight className="h-8 w-8" />
-            </Button>
+              <span className="sr-only">Next</span>
+            </PhotoButton>
 
             {/* Image Container */}
             <motion.div
