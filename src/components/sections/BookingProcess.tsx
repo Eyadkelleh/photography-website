@@ -9,41 +9,41 @@ import { Button } from '@/components/ui';
 const steps = [
   {
     id: 1,
-    title: 'Erstberatung',
-    description: 'Wir besprechen Ihre Vision, Vorlieben und Details der Sitzung, um sicherzustellen, dass wir genau das einfangen, was Sie sich vorstellen.',
+    title: 'Erstgespräch',
+    description: 'Wir sprechen über eure Wünsche, Vorstellungen und Ideen. Ob Hund, Katze, Pferd oder ein besonderer Anlass – ich möchte verstehen, was euch wichtig ist und wie die Fotos später aussehen sollen.',
     icon: MessageCircle,
     color: 'text-soft-rose',
     bgColor: 'bg-soft-rose/10',
   },
   {
     id: 2,
-    title: 'Sitzungsplanung',
-    description: 'Location-Scouting, Zeitabstimmung und kreative Ausrichtungsplanung für das perfekte Shooting.',
+    title: 'Planung',
+    description: 'Gemeinsam finden wir die passende Location, die richtige Tageszeit (Sonnenauf- oder -untergang, Homestory, Studio) und stimmen alles ab, damit wir den perfekten Rahmen schaffen.',
     icon: MapPin,
     color: 'text-sage-green',
     bgColor: 'bg-sage-green/10',
   },
   {
     id: 3,
-    title: 'Fotoshooting',
-    description: 'Professionelle Fotositzung, bei der wir Ihre einzigartigen Momente mit Künstlerischem Geschick und Sorgfalt einfangen.',
+    title: 'Shooting',
+    description: 'In entspannter Atmosphäre entstehen die Fotos – ohne Stress, ohne starre Posen. Ich lasse euch und eure Tiere ankommen, beobachte und begleite, sodass echte Momente und Gefühle sichtbar werden.',
     icon: Camera,
     color: 'text-gold-accent',
     bgColor: 'bg-gold-accent/10',
   },
   {
     id: 4,
-    title: 'Professionelle Bearbeitung',
-    description: 'Professionelle Nachbearbeitung und Bildverbesserung, um das Beste aus jedem Foto herauszuholen.',
-    icon: Edit,
+    title: 'Galerie & Auswahl',
+    description: 'Nach dem Shooting erhaltet ihr eine Online-Galerie mit euren Aufnahmen. Dort könnt ihr in Ruhe auswählen, welche Bilder ihr haben möchtet – digital, als Print oder in hochwertigen Produkten wie Alben, Abzügen oder Wandbildern.',
+    icon: ImageIcon,
     color: 'text-warm-brown',
     bgColor: 'bg-warm-brown/10',
   },
   {
     id: 5,
-    title: 'Galerie-Übergabe',
-    description: 'Hochauflösende Bilder, die über Ihre private Online-Galerie für einfachen Zugang und Teilen bereitgestellt werden.',
-    icon: ImageIcon,
+    title: 'Bildbearbeitung',
+    description: 'Jedes ausgewählte Bild wird liebevoll und professionell bearbeitet, damit eure besonderen Momente in ihrer schönsten Form zu euch kommen.',
+    icon: Edit,
     color: 'text-deep-charcoal',
     bgColor: 'bg-deep-charcoal/10',
   },
@@ -124,11 +124,11 @@ export const BookingProcess = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-script font-medium text-deep-charcoal mb-6">
-            Unser Prozess
+            Mein Prozess ✨
           </h2>
           <p className="text-lg md:text-xl text-warm-gray max-w-3xl mx-auto leading-relaxed">
-            Von der Erstberatung bis zur finalen Übergabe gewährleisten wir ein nahtloses und 
-            angenehmes Erlebnis, das in atemberaubender Fotografie resultiert.
+            Von der ersten Idee bis zu euren fertigen Bildern begleite ich euch mit Ruhe, Herz und einem klaren Blick fürs Wesentliche.
+            So läuft ein Shooting bei mir ab:
           </p>
         </motion.div>
 
