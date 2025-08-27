@@ -178,7 +178,7 @@ export const FAQS: FAQ[] = [
 export const SOCIAL_MEDIA: SocialMediaLink[] = [
   {
     platform: 'Instagram',
-    url: 'https://instagram.com/visualpoetryphotography',
+    url: 'https://www.instagram.com/wunderwerk_fotografie?utm_source=qr&igsh=MXAwYXo1YWFuamhicQ==',
     icon: 'instagram',
   },
   {
