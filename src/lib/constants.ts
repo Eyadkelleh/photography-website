@@ -7,7 +7,7 @@ export const SITE_CONFIG = {
   url: 'https://visualpoetry.photography',
   email: 'wunderwerk.fotografie@web.de',
   phone: '+1 (555) 123-4567',
-  location: 'Available throughout California',
+  location: 'Umkreis Marsberg, Paderborn, Kassel und Büsum (Nordsee) andere Orte auf Anfrage',
 };
 
 export const NAVIGATION_ITEMS: NavigationItem[] = [
