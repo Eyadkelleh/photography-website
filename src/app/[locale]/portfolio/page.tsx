@@ -166,8 +166,7 @@ export default function PortfolioPage() {
                 key={category.value}
                 variant={activeCategory === category.value ? 'primary' : 'secondary'}
                 icon="eye"
-                size="sm"
-                onClick={() => setActiveCategory(category.value)}
+                onClick={(e) => setActiveCategory(category.value)}
                 className="capitalize min-w-[100px]"
               >
                 {category.label}
@@ -213,7 +212,6 @@ export default function PortfolioPage() {
                       <PhotoButton
                         variant="secondary"
                         icon="eye"
-                        size="sm"
                         className="bg-white/20 backdrop-blur-sm hover:bg-white/30 border border-white/20 text-white"
                       >
                         <span className="sr-only">View</span>
@@ -221,7 +219,6 @@ export default function PortfolioPage() {
                       <PhotoButton
                         variant="secondary"
                         icon="focus"
-                        size="sm"
                         className="bg-white/20 backdrop-blur-sm hover:bg-white/30 border border-white/20 text-white"
                       >
                         <span className="sr-only">Favorite</span>
@@ -257,8 +254,7 @@ export default function PortfolioPage() {
             <PhotoButton
               variant="secondary"
               icon="focus"
-              size="sm"
-              onClick={closeLightbox}
+              onClick={(e) => closeLightbox()}
               className="absolute top-6 right-6 z-60 bg-black/50 text-white hover:bg-white/10 backdrop-blur-sm"
             >
               <span className="sr-only">Close</span>
@@ -268,7 +264,6 @@ export default function PortfolioPage() {
             <PhotoButton
               variant="secondary"
               icon="eye"
-              size="sm"
               onClick={(e) => {
                 e.stopPropagation();
                 navigateImage('prev');
@@ -281,7 +276,6 @@ export default function PortfolioPage() {
             <PhotoButton
               variant="secondary"
               icon="eye"
-              size="sm"
               onClick={(e) => {
                 e.stopPropagation();
                 navigateImage('next');

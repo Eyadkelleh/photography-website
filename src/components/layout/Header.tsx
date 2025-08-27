@@ -4,15 +4,24 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { Camera, Eye, Home, User, Mail } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { PhotoButton, LanguageSwitcher } from '@/components/ui';
-import { useNavigationItems } from '@/lib/constants-i18n';
 import { MobileNav } from '@/components/navigation/MobileNav';
 
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
-  const navigationItems = useNavigationItems();
+
+  // Create navigation with photography-themed icons
+  const navigationWithIcons = [
+    { name: 'Home', href: '/', icon: Home },
+    { name: 'Über mich', href: '/about', icon: User },
+    { name: 'Portfolio', href: '/portfolio', icon: Eye },
+    { name: 'Services', href: '/services', icon: Camera },
+    { name: 'Kontakt', href: '/contact', icon: Mail },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,79 +36,112 @@ export const Header = () => {
     <header
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        'mobile-container px-4 md:px-6',
         isScrolled
           ? 'bg-warm-white/95 backdrop-blur-md shadow-sm'
           : 'bg-transparent'
       )}
     >
-      <div className="flex items-center justify-between h-16 md:h-20">
-        {/* Logo */}
-        <Link
-          href="/"
-          className="flex items-center space-x-2 md:space-x-3 hover:opacity-80 transition-opacity touch-feedback"
+      <div className="flex items-center justify-center h-16 md:h-20">
+        {/* Centered Photography Navigation Menu */}
+        <motion.nav 
+          className="hidden lg:flex items-center bg-warm-white/95 backdrop-blur-lg rounded-full shadow-xl border border-gold-accent/30 p-2 space-x-2"
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <div className="relative h-8 w-8 md:h-10 md:w-10">
-            <Image
-              src="/images/logo.jpg"
-              alt="Visual Poetry Photography Logo"
-              fill
-              className="object-contain"
-              priority
-            />
-          </div>
-          <div className="text-deep-charcoal">
-            <div className="font-script text-lg md:text-xl font-bold">Wunderwerk</div>
-            <div className="text-xs text-warm-gray -mt-1 hidden md:block">Photography</div>
-          </div>
-        </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center space-x-2">
-          {navigationItems.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className={cn(
-                'relative px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 group',
-                'hover:bg-gold-accent/10 hover:text-gold-accent',
-                pathname === item.href
-                  ? 'text-gold-accent bg-gold-accent/10'
-                  : 'text-deep-charcoal'
-              )}
+          {/* Main Navigation Links */}
+          {navigationWithIcons.map((item, index) => {
+            const isActive = pathname === item.href;
+            const Icon = item.icon;
+            return (
+              <motion.div
+                key={item.name}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: index * 0.05, duration: 0.2 }}
+              >
+                <Link
+                  href={item.href}
+                  className={cn(
+                    'relative flex items-center space-x-1.5 px-3 py-2 rounded-full transition-all duration-300 group text-sm font-medium',
+                    isActive
+                      ? 'bg-gradient-to-r from-gold-accent/20 to-gold-accent/10 text-gold-accent shadow-md'
+                      : 'text-deep-charcoal hover:bg-soft-beige/60 hover:shadow-sm'
+                  )}
+                >
+                  <motion.div
+                    className={cn(
+                      'p-1 rounded-full transition-all duration-200',
+                      isActive 
+                        ? 'bg-gold-accent/20' 
+                        : 'bg-warm-gray/10 group-hover:bg-warm-gray/20'
+                    )}
+                    whileHover={{ scale: 1.1, rotate: 3 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <Icon className={cn(
+                      'w-3.5 h-3.5 transition-colors duration-200',
+                      isActive ? 'text-gold-accent' : 'text-warm-gray group-hover:text-deep-charcoal'
+                    )} />
+                  </motion.div>
+                  
+                  <span className={cn(
+                    'text-xs transition-colors duration-200',
+                    isActive ? 'text-gold-accent font-medium' : 'text-deep-charcoal'
+                  )}>
+                    {item.name}
+                  </span>
+
+                  {isActive && (
+                    <motion.div
+                      layoutId="activeTab"
+                      className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-gold-accent rounded-full"
+                      transition={{ type: "spring", damping: 15, stiffness: 300 }}
+                    />
+                  )}
+                </Link>
+              </motion.div>
+            );
+          })}
+
+          {/* Compact Actions Section */}
+          <div className="flex items-center space-x-1 pl-2 ml-2 border-l border-gold-accent/20">
+            <LanguageSwitcher />
+            
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <PhotoButton 
+                href="/portfolio"
+                variant="secondary"
+                icon="eye"
+                className="px-3 py-1.5 text-xs rounded-full shadow-sm hover:shadow-md transition-all duration-300"
+              >
+                Portfolio
+              </PhotoButton>
+            </motion.div>
+            
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <PhotoButton 
+                href="/contact"
+                variant="primary"
+                icon="camera"
+                className="px-3 py-1.5 text-xs rounded-full shadow-md hover:shadow-lg transition-all duration-300"
+              >
+                Buchen
+              </PhotoButton>
+            </motion.div>
+
+            <motion.a
+              href="mailto:wunderwerk.fotografie@web.de"
+              className="p-1.5 rounded-full bg-soft-rose/10 text-soft-rose hover:bg-soft-rose/20 transition-all duration-200 group"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              title="Email kontaktieren"
             >
-              {item.name}
-              {/* Active indicator */}
-              {pathname === item.href && (
-                <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-gold-accent rounded-full" />
-              )}
-              {/* Hover effect */}
-              <span className="absolute inset-0 rounded-lg bg-gold-accent/5 scale-0 group-hover:scale-100 transition-transform duration-300" />
-            </Link>
-          ))}
-        </nav>
-
-        {/* Desktop CTA Buttons */}
-        <div className="hidden lg:flex items-center space-x-3">
-          <LanguageSwitcher />
-          <div className="h-6 w-px bg-warm-gray/20 mx-2" />
-          <PhotoButton 
-            href="/portfolio"
-            variant="secondary"
-            icon="eye"
-            className="min-w-[140px] shadow-sm hover:shadow-md transition-shadow duration-300"
-          >
-            Portfolio ansehen
-          </PhotoButton>
-          <PhotoButton 
-            href="/contact"
-            variant="primary"
-            icon="camera"
-            className="min-w-[140px] shadow-lg hover:shadow-xl transition-shadow duration-300"
-          >
-            Session buchen
-          </PhotoButton>
-        </div>
+              <Mail className="w-3.5 h-3.5 group-hover:scale-110 transition-transform duration-200" />
+            </motion.a>
+          </div>
+        </motion.nav>
 
         {/* Mobile Contact Button & Hamburger */}
         <div className="flex items-center space-x-2 lg:hidden">

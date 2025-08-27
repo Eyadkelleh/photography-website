@@ -18,7 +18,8 @@
       "mcp__context7__get-library-docs",
       "mcp__render__list_workspaces",
       "mcp__render__list_deploys",
-      "Bash(node:*)"
+      "Bash(node:*)",
+      "Bash(chmod:*)"
     ],
     "deny": []
   }

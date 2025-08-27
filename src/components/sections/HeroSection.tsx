@@ -2,10 +2,9 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { motion, AnimatePresence, useMotionValue, useSpring } from 'framer-motion';
-import { ArrowDown, Play } from 'lucide-react';
-import { Button, PhotoButton } from '@/components/ui';
+import { ArrowDown } from 'lucide-react';
+import { PhotoButton } from '@/components/ui';
 
 const heroImages = [
   {

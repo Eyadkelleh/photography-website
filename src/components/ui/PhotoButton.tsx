@@ -12,7 +12,7 @@ interface PhotoButtonProps {
   variant?: 'primary' | 'secondary';
   icon?: 'camera' | 'eye' | 'aperture' | 'focus';
   className?: string;
-  onClick?: () => void;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
   'aria-label'?: string;
   disabled?: boolean;
 }
