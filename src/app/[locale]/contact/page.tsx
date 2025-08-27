@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { Mail, Phone, MapPin, Clock, Camera, Heart, Eye } from 'lucide-react';
-import { Button } from '@/components/ui';
+import { Mail, Phone, MapPin, Clock, Camera, Heart } from 'lucide-react';
+import { Button, PhotoButton } from '@/components/ui';
 import { useTranslations } from 'next-intl';
 import { SITE_CONFIG } from '@/lib/constants';
 
@@ -195,23 +195,23 @@ export default function ContactPage() {
             <p className="text-xl text-warm-white/80 mb-12 leading-relaxed">
               Jeder Moment ist einzigartig, jede Geschichte ist besonders. Lassen Sie uns Ihre gemeinsam einfangen.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button size="lg" className="bg-gradient-to-r from-gold-accent to-amber-500 text-deep-charcoal font-semibold hover:from-gold-accent/90 hover:to-amber-500/90 hover:shadow-xl hover:shadow-gold-accent/30 hover:scale-[1.02] transition-all duration-300 border border-gold-accent/20 min-h-[52px] px-10 py-4 rounded-xl" asChild>
-                <Link href={`mailto:${SITE_CONFIG.email}`}>
-                  <div className="flex items-center gap-3">
-                    <Mail className="h-5 w-5" />
-                    <span>Das Gespräch beginnen</span>
-                  </div>
-                </Link>
-              </Button>
-              <Button variant="secondary" size="lg" className="border-2 border-warm-white/30 text-warm-white font-semibold hover:bg-warm-white hover:text-deep-charcoal hover:shadow-xl hover:shadow-warm-white/20 hover:scale-[1.02] transition-all duration-300 backdrop-blur-sm bg-white/5 min-h-[52px] px-10 py-4 rounded-xl" asChild>
-                <Link href="/portfolio">
-                  <div className="flex items-center gap-3">
-                    <Eye className="h-5 w-5" />
-                    <span>Unsere Arbeit ansehen</span>
-                  </div>
-                </Link>
-              </Button>
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">
+              <PhotoButton 
+                href={`mailto:${SITE_CONFIG.email}`} 
+                variant="primary" 
+                icon="focus"
+                className="min-w-[240px]"
+              >
+                Das Gespräch beginnen
+              </PhotoButton>
+              <PhotoButton 
+                href="/portfolio" 
+                variant="secondary" 
+                icon="eye"
+                className="min-w-[200px]"
+              >
+                Unsere Arbeit ansehen
+              </PhotoButton>
             </div>
           </div>
         </div>

@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Check, Clock, DollarSign, MapPin, Camera } from 'lucide-react';
-import { Button, Card, CardContent, CardHeader, CardTitle } from '@/components/ui';
+import { PhotoButton, Card, CardContent, CardHeader, CardTitle } from '@/components/ui';
 import { useTranslations } from 'next-intl';
 import { useServices, usePackages } from '@/lib/constants-i18n';
 
@@ -66,9 +66,14 @@ export default function ServicesPage() {
             <p className="text-xl md:text-2xl text-warm-white/90 mb-12 leading-relaxed">
               {t('subtitle')}
             </p>
-            <Button size="lg" className="bg-gold-accent text-deep-charcoal hover:bg-cyan-400 hover:text-white hover:shadow-xl hover:shadow-cyan-500/50 transition-all duration-200" asChild>
-              <Link href="#packages">{t('viewPackages')}</Link>
-            </Button>
+            <PhotoButton 
+              href="#packages"
+              variant="primary"
+              icon="camera"
+              className="min-w-[200px]"
+            >
+              {t('viewPackages')}
+            </PhotoButton>
           </div>
         </div>
       </section>
@@ -161,14 +166,14 @@ export default function ServicesPage() {
                     </div>
                   </div>
 
-                  <Button 
-                    className={`w-full transition-all duration-200 ${pkg.popular ? 'bg-gold-accent text-deep-charcoal hover:bg-cyan-400 hover:text-white hover:shadow-xl hover:shadow-cyan-500/50 hover:scale-105' : 'hover:bg-teal-400 hover:text-white hover:shadow-lg'}`}
-                    asChild
+                  <PhotoButton 
+                    href={`/contact?package=${pkg.id}`}
+                    variant="primary"
+                    icon="camera"
+                    className="w-full"
                   >
-                    <Link href={`/contact?package=${pkg.id}`}>
-                      {t('choose')} {pkg.name}
-                    </Link>
-                  </Button>
+                    {t('choose')} {pkg.name}
+                  </PhotoButton>
                 </CardContent>
               </Card>
             ))}
@@ -178,9 +183,14 @@ export default function ServicesPage() {
             <p className="text-warm-gray mb-6">
               {t('customDescription')}
             </p>
-            <Button variant="secondary" size="lg" className="hover:bg-teal-400 hover:text-white hover:shadow-xl hover:shadow-teal-500/50 transition-all duration-200" asChild>
-              <Link href="/contact?custom=true">{t('customQuote')}</Link>
-            </Button>
+            <PhotoButton 
+              href="/contact?custom=true"
+              variant="secondary"
+              icon="aperture"
+              className="min-w-[200px]"
+            >
+              {t('customQuote')}
+            </PhotoButton>
           </div>
         </div>
       </section>
@@ -287,12 +297,22 @@ export default function ServicesPage() {
             {t('readyDescription')}
           </p>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <Button size="lg" className="bg-gold-accent text-deep-charcoal hover:bg-cyan-400 hover:text-white hover:shadow-xl hover:shadow-cyan-500/50 transition-all duration-200" asChild>
-              <Link href="/contact">{t('getStarted')}</Link>
-            </Button>
-            <Button variant="secondary" size="lg" className="border-warm-white text-warm-white hover:bg-emerald-400 hover:text-white hover:border-emerald-400 hover:shadow-xl hover:shadow-emerald-500/50 transition-all duration-200" asChild>
-              <Link href="/portfolio">{t('viewWork')}</Link>
-            </Button>
+            <PhotoButton 
+              href="/contact"
+              variant="primary"
+              icon="camera"
+              className="min-w-[180px]"
+            >
+              {t('getStarted')}
+            </PhotoButton>
+            <PhotoButton 
+              href="/portfolio"
+              variant="secondary"
+              icon="eye"
+              className="min-w-[180px]"
+            >
+              {t('viewWork')}
+            </PhotoButton>
           </div>
         </div>
       </section>

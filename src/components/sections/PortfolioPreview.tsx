@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Eye, Heart } from 'lucide-react';
-import { Button } from '@/components/ui';
+import { Button, PhotoButton } from '@/components/ui';
 import { GALLERY_CATEGORIES } from '@/lib/constants';
 
 const portfolioImages = [
@@ -165,12 +165,14 @@ export const PortfolioPreview = () => {
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-          <Button size="lg" asChild>
-            <Link href="/portfolio">
-              Vollständiges Portfolio ansehen
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </Button>
+          <PhotoButton 
+            href="/portfolio"
+            variant="primary"
+            icon="eye"
+            className="min-w-[280px]"
+          >
+            Vollständiges Portfolio ansehen
+          </PhotoButton>
         </motion.div>
       </div>
     </section>

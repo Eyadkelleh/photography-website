@@ -1,11 +1,10 @@
 import Link from 'next/link';
-import { Instagram, Facebook, Heart, Mail, Phone, MapPin } from 'lucide-react';
+import { Instagram, Heart, Mail, Phone, MapPin } from 'lucide-react';
 import { SITE_CONFIG, NAVIGATION_ITEMS, SOCIAL_MEDIA } from '@/lib/constants';
 // import { Button } from '@/components/ui';
 
 const socialIcons = {
   instagram: Instagram,
-  facebook: Facebook,
   pinterest: Heart,
 };
 

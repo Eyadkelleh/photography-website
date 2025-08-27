@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
-import { Button } from '@/components/ui';
+import { PhotoButton } from '@/components/ui';
 
 const testimonials = [
   {
@@ -181,11 +181,14 @@ export const TestimonialsSection = () => {
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-          <Button size="lg" asChild>
-            <Link href="/testimonials">
-              Weitere Geschichten lesen
-            </Link>
-          </Button>
+          <PhotoButton 
+            href="/testimonials"
+            variant="primary"
+            icon="eye"
+            className="min-w-[240px]"
+          >
+            Weitere Geschichten lesen
+          </PhotoButton>
         </motion.div>
       </div>
     </section>

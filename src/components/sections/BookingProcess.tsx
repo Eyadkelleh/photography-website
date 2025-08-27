@@ -1,10 +1,9 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import Link from 'next/link';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { MessageCircle, MapPin, Camera, Edit, Image as ImageIcon } from 'lucide-react';
-import { Button } from '@/components/ui';
+import { PhotoButton } from '@/components/ui';
 
 const steps = [
   {
@@ -318,17 +317,23 @@ export const BookingProcess = () => {
               Lassen Sie uns gemeinsam etwas Schönes erschaffen. Buchen Sie heute Ihre Beratung 
               und machen Sie den ersten Schritt zum Einfangen Ihrer kostbarsten Momente.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild>
-                <Link href="/contact">
-                  Sitzung beginnen
-                </Link>
-              </Button>
-              <Button variant="secondary" size="lg" asChild>
-                <Link href="/services">
-                  Pakete ansehen
-                </Link>
-              </Button>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
+              <PhotoButton 
+                href="/contact" 
+                variant="primary" 
+                icon="camera"
+                className="min-w-[200px]"
+              >
+                Sitzung beginnen
+              </PhotoButton>
+              <PhotoButton 
+                href="/services" 
+                variant="secondary" 
+                icon="eye"
+                className="min-w-[200px]"
+              >
+                Pakete ansehen
+              </PhotoButton>
             </div>
           </div>
         </motion.div>

@@ -182,11 +182,6 @@ export const SOCIAL_MEDIA: SocialMediaLink[] = [
     icon: 'instagram',
   },
   {
-    platform: 'Facebook',
-    url: 'https://facebook.com/visualpoetryphotography',
-    icon: 'facebook',
-  },
-  {
     platform: 'Pinterest',
     url: 'https://pinterest.com/visualpoetryphotography',
     icon: 'pinterest',

@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useRef } from 'react';
-import { Button } from '@/components/ui/Button';
+import { PhotoButton } from '@/components/ui';
 import { cn } from '@/lib/utils';
 
 interface FormData {
@@ -352,29 +352,32 @@ export const MobileContactForm: React.FC<MobileContactFormProps> = ({
         {/* Navigation buttons */}
         <div className="flex space-x-3">
           {currentStep > 1 && (
-            <Button
-              type="button"
+            <PhotoButton
               variant="secondary"
-              onClick={prevStep}
+              icon="aperture"
               className="flex-1 touch-feedback"
+              onClick={prevStep}
             >
               Back
-            </Button>
+            </PhotoButton>
           )}
           
           {currentStep < totalSteps ? (
-            <Button
-              type="button"
-              onClick={nextStep}
+            <PhotoButton
+              variant="primary"
+              icon="camera"
               className="flex-1 touch-feedback"
+              onClick={nextStep}
             >
               Continue
-            </Button>
+            </PhotoButton>
           ) : (
-            <Button
-              type="submit"
-              disabled={isSubmitting}
+            <PhotoButton
+              variant="primary"
+              icon="focus"
               className="flex-1 touch-feedback"
+              onClick={handleSubmit}
+              disabled={isSubmitting}
             >
               {isSubmitting ? (
                 <div className="flex items-center">
@@ -384,7 +387,7 @@ export const MobileContactForm: React.FC<MobileContactFormProps> = ({
               ) : (
                 'Send Message'
               )}
-            </Button>
+            </PhotoButton>
           )}
         </div>
       </form>

@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { X } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { Button } from './Button';
+import { Button, PhotoButton } from '.';
 
 interface ModalProps {
   isOpen: boolean;

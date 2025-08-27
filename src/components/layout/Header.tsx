@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
-import { Button, LanguageSwitcher } from '@/components/ui';
+import { PhotoButton, LanguageSwitcher } from '@/components/ui';
 import { useNavigationItems } from '@/lib/constants-i18n';
 import { MobileNav } from '@/components/navigation/MobileNav';
 
@@ -75,25 +75,35 @@ export const Header = () => {
         {/* Desktop CTA Buttons */}
         <div className="hidden lg:flex items-center space-x-4">
           <LanguageSwitcher />
-          <Button variant="secondary" size="sm" asChild>
-            <Link href="/portfolio">Portfolio ansehen</Link>
-          </Button>
-          <Button size="sm" asChild>
-            <Link href="/contact">Session buchen</Link>
-          </Button>
+          <PhotoButton 
+            href="/portfolio"
+            variant="secondary"
+            icon="eye"
+            className="min-w-[140px]"
+          >
+            Portfolio ansehen
+          </PhotoButton>
+          <PhotoButton 
+            href="/contact"
+            variant="primary"
+            icon="camera"
+            className="min-w-[140px]"
+          >
+            Session buchen
+          </PhotoButton>
         </div>
 
         {/* Mobile Contact Button & Hamburger */}
         <div className="flex items-center space-x-2 lg:hidden">
           <LanguageSwitcher />
-          <Button
+          <PhotoButton
+            href="/contact"
             variant="primary"
-            size="sm"
-            className="text-sm px-3 py-2 touch-feedback"
-            asChild
+            icon="camera"
+            className="text-sm px-3 py-2 min-w-[70px] touch-feedback"
           >
-            <Link href="/contact">Book</Link>
-          </Button>
+            Book
+          </PhotoButton>
           <MobileNav />
         </div>
       </div>

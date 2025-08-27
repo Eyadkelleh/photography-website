@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ArrowRight, Clock, DollarSign } from 'lucide-react';
-import { Card, CardContent, Button } from '@/components/ui';
+import { Card, CardContent, PhotoButton } from '@/components/ui';
 import { SERVICES } from '@/lib/constants';
 
 export const ServicesPreview = () => {
@@ -79,16 +79,14 @@ export const ServicesPreview = () => {
                       {service.price.replace('From $', '')}+
                     </div>
                   </div>
-                  <Button
-                    variant="text"
-                    className="w-full group-hover:bg-soft-beige transition-colors"
-                    asChild
+                  <PhotoButton
+                    href={`/services#${service.id}`}
+                    variant="secondary"
+                    icon="eye"
+                    className="w-full"
                   >
-                    <Link href={`/services#${service.id}`}>
-                      Mehr erfahren
-                      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </Link>
-                  </Button>
+                    Mehr erfahren
+                  </PhotoButton>
                 </CardContent>
               </Card>
             </motion.div>
@@ -102,12 +100,14 @@ export const ServicesPreview = () => {
           viewport={{ once: true }}
           className="text-center"
         >
-          <Button size="lg" asChild>
-            <Link href="/services">
-              Alle Leistungen ansehen
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </Button>
+          <PhotoButton 
+            href="/services"
+            variant="primary"
+            icon="camera"
+            className="min-w-[220px]"
+          >
+            Alle Leistungen ansehen
+          </PhotoButton>
         </motion.div>
       </div>
     </section>

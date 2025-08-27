@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Eye, Heart, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
-import { Button } from '@/components/ui';
+import { Button, PhotoButton } from '@/components/ui';
 import { GALLERY_CATEGORIES } from '@/lib/constants';
 
 const portfolioImages = [

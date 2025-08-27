@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Award, MapPin, Camera, Heart, Users, Star, Leaf, Sun, Search, Sparkles } from 'lucide-react';
-import { Button } from '@/components/ui';
+import { PhotoButton } from '@/components/ui';
 import { useTranslations } from 'next-intl';
 import { useAwards } from '@/lib/constants-i18n';
 
@@ -95,12 +95,22 @@ export default function AboutPage() {
 
                 {/* CTA Buttons */}
                 <div className="flex flex-wrap gap-4">
-                  <Button size="lg" className="bg-deep-charcoal hover:bg-deep-charcoal/90 text-white" asChild>
-                    <Link href="/contact">{t('letsCreate')}</Link>
-                  </Button>
-                  <Button variant="secondary" size="lg" className="border-2 border-deep-charcoal text-deep-charcoal hover:bg-deep-charcoal hover:text-white" asChild>
-                    <Link href="/portfolio">{t('viewWork')}</Link>
-                  </Button>
+                  <PhotoButton 
+                    href="/contact"
+                    variant="primary"
+                    icon="camera"
+                    className="min-w-[180px]"
+                  >
+                    {t('letsCreate')}
+                  </PhotoButton>
+                  <PhotoButton 
+                    href="/portfolio"
+                    variant="secondary"
+                    icon="eye"
+                    className="min-w-[180px]"
+                  >
+                    {t('viewWork')}
+                  </PhotoButton>
                 </div>
               </div>
             </div>
@@ -399,12 +409,22 @@ export default function AboutPage() {
               {t('readyDescription')}
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button size="lg" className="bg-gold-accent text-deep-charcoal hover:bg-gold-accent/90 font-medium" asChild>
-                <Link href="/contact">{t('startSession')}</Link>
-              </Button>
-              <Button variant="secondary" size="lg" className="border-2 border-white text-white hover:bg-white hover:text-deep-charcoal font-medium" asChild>
-                <Link href="/services">{t('viewServices')}</Link>
-              </Button>
+              <PhotoButton 
+                href="/contact"
+                variant="primary"
+                icon="camera"
+                className="min-w-[180px]"
+              >
+                {t('startSession')}
+              </PhotoButton>
+              <PhotoButton 
+                href="/services"
+                variant="secondary"
+                icon="aperture"
+                className="min-w-[180px]"
+              >
+                {t('viewServices')}
+              </PhotoButton>
             </div>
           </div>
         </div>

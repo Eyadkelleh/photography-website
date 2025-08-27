@@ -10,6 +10,83 @@
 }
 @import "tailwindcss";
 
+/* Mobile-First Touch Optimizations */
+html {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Ensure minimum touch targets for mobile accessibility */
+.photo-button {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Improve touch response */
+@media (hover: none) and (pointer: coarse) {
+  .photo-button:hover {
+    transform: none;
+  }
+  
+  .photo-button:active {
+    transform: scale(0.95);
+    transition: transform 0.1s ease-out;
+  }
+}
+
+/* Photography Button Animations */
+@keyframes camera-focus {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    filter: blur(0px);
+  }
+  50% {
+    transform: scale(1.1) rotate(5deg);
+    filter: blur(1px);
+  }
+}
+
+@keyframes lens-shimmer {
+  0% {
+    transform: translateX(-100%) skewX(-15deg);
+  }
+  100% {
+    transform: translateX(200%) skewX(-15deg);
+  }
+}
+
+@keyframes aperture-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes photo-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 var(--gold-accent);
+    opacity: 1;
+  }
+  50% {
+    box-shadow: 0 0 0 20px rgba(212, 175, 55, 0);
+    opacity: 0.7;
+  }
+}
+
+.photo-button-shimmer {
+  animation: lens-shimmer 0.6s ease-in-out;
+}
+
+.photo-button-pulse {
+  animation: photo-pulse 2s ease-in-out infinite;
+}
+
+.photo-button-focus {
+  animation: camera-focus 0.3s ease-in-out;
+}
+
 :root {
   /* Primary Colors */
   --warm-white: #FEFCF8;

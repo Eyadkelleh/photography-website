@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion, AnimatePresence, useMotionValue, useSpring } from 'framer-motion';
 import { ArrowDown, Play } from 'lucide-react';
-import { Button } from '@/components/ui';
+import { Button, PhotoButton } from '@/components/ui';
 
 const heroImages = [
   {
@@ -188,30 +188,39 @@ export const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-16"
         >
-          <Button size="lg" className="text-lg px-8 py-4" asChild>
-            <Link href="/contact">
-              Buchen Sie Ihren unvergesslichen Tag
-            </Link>
-          </Button>
-          <Button variant="secondary" size="lg" className="text-lg px-8 py-4 bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white hover:text-deep-charcoal">
-            <Play className="mr-2 h-5 w-5" />
+          <PhotoButton 
+            href="/contact" 
+            variant="primary" 
+            icon="camera"
+            className="min-w-[280px]"
+          >
+            Buchen Sie Ihren unvergesslichen Tag
+          </PhotoButton>
+          <PhotoButton 
+            href="/about" 
+            variant="secondary" 
+            icon="eye"
+            className="min-w-[200px]"
+          >
             Unsere Geschichte
-          </Button>
+          </PhotoButton>
         </motion.div>
 
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          className="absolute -bottom-32 left-1/2 transform -translate-x-1/2"
         >
-          <Link
-            href="#services"
-            className="flex flex-col items-center text-white/80 hover:text-white transition-colors group"
+          <PhotoButton 
+            href="#services" 
+            variant="secondary" 
+            icon="aperture"
+            className="min-w-[160px] flex-col gap-1"
           >
-            <span className="text-sm mb-2">Mehr entdecken</span>
-            <ArrowDown className="h-6 w-6 animate-bounce group-hover:scale-110 transition-transform" />
-          </Link>
+            <span className="text-sm">Mehr entdecken</span>
+            <ArrowDown className="h-4 w-4 animate-bounce" />
+          </PhotoButton>
         </motion.div>
       </div>
 
