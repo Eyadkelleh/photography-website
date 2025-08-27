@@ -131,7 +131,7 @@ export default function ContactPage() {
                 Wir melden uns innerhalb von 24 Stunden mit einem personalisierten Angebot bei Ihnen zurück.
               </p>
               <div className="space-y-4">
-                <Button size="xl" className="bg-gradient-to-r from-gold-accent to-amber-500 text-deep-charcoal font-semibold hover:from-gold-accent/90 hover:to-amber-500/90 hover:shadow-lg hover:shadow-gold-accent/25 hover:scale-[1.02] transition-all duration-200 border border-gold-accent/20 min-h-[48px] px-8 py-3 rounded-xl" asChild>
+                <Button size="lg" className="bg-gradient-to-r from-gold-accent to-amber-500 text-deep-charcoal font-semibold hover:from-gold-accent/90 hover:to-amber-500/90 hover:shadow-lg hover:shadow-gold-accent/25 hover:scale-[1.02] transition-all duration-200 border border-gold-accent/20 min-h-[48px] px-8 py-3 rounded-xl" asChild>
                   <Link href={`mailto:${SITE_CONFIG.email}`}>
                     <div className="flex items-center gap-2">
                       <Mail className="h-5 w-5" />
