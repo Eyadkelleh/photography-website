@@ -76,10 +76,10 @@ export const Header = () => {
         <div className="hidden lg:flex items-center space-x-4">
           <LanguageSwitcher />
           <Button variant="secondary" size="sm" asChild>
-            <Link href="/portfolio">View Portfolio</Link>
+            <Link href="/portfolio">Portfolio ansehen</Link>
           </Button>
           <Button size="sm" asChild>
-            <Link href="/contact">Book Session</Link>
+            <Link href="/contact">Session buchen</Link>
           </Button>
         </div>
 

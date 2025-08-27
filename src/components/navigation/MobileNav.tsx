@@ -169,7 +169,7 @@ export const MobileNav: React.FC<MobileNavProps> = ({ className }) => {
             className="w-full touch-feedback"
             asChild
           >
-            <Link href="/contact">Book a Session</Link>
+            <Link href="/contact">Session buchen</Link>
           </Button>
         </div>
 
